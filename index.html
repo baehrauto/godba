@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribution By Air | Logistics Solutions From People Who Care</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        html {
+            overflow-x: hidden;
+        }
+        
+        /* Ensure mega menu can overflow */
+        nav, nav > div, nav > div > div {
+            overflow: visible !important;
+        }
+        .mega-menu {
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        .group:hover .mega-menu {
+            transform: translateX(-50%) !important;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(30, 126, 52, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(30, 126, 52, 0.6);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #2d8650 0%, #ffffff 50%, #2d8650 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2e4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow-effect {
+            position: relative;
+        }
+        
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(135deg, #1e7e34, #2d8650);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .glow-effect:hover::before {
+            opacity: 1;
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1e7e34',
+                            dark: '#155724',
+                            light: '#2d8650',
+                        },
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+    
+    <!-- ============================================ -->
+    <!-- NAVIGATION -->
+    <!-- ============================================ -->
+    <nav id="main-nav" class="bg-white backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100 overflow-visible transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-visible">
+            <div class="flex justify-between items-center h-20 relative">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center shadow-lg">
+                        <span class="text-white font-bold text-xl">DBA</span>
+                </div>
+                    <div class="hidden sm:block">
+                        <span class="text-lg font-bold text-gray-900">Distribution By Air</span>
+                        <p class="text-xs text-gray-500">Logistics Solutions</p>
+                </div>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <!-- Services Mega Menu -->
+                    <div class="relative group">
+                        <a href="#services" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[900px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <div class="grid grid-cols-3 gap-8">
+                                <!-- Column 1: Domestic Shipping -->
+                                <div>
+                                    <a href="domestic-shipping.html" class="flex items-center mb-4 group">
+                                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center mr-3">
+                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                            </svg>
+                                        </div>
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Domestic Shipping</h3>
+                                    </a>
+                                    <p class="text-sm text-gray-600 mb-4">Nationwide air and ground shipping solutions</p>
+                                </div>
+                                
+                                <!-- Column 2: International Shipping with submenu -->
+                                <div>
+                                    <a href="international-shipping.html" class="flex items-center mb-4 group">
+                                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center mr-3">
+                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                        </div>
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">International Shipping</h3>
+                                    </a>
+                                    <p class="text-sm text-gray-600 mb-4">Global logistics with customs expertise</p>
+                                    <ul class="space-y-2 pl-13">
+                                        <li><a href="international-air.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Air
+                                        </a></li>
+                                        <li><a href="international-ocean.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Ocean Import/Export
+                                        </a></li>
+                                        <li><a href="custom-services.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Custom Services
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Column 3: Specialized Shipping Solutions with submenu -->
+                                <div>
+                                    <a href="specialized-shipping.html" class="flex items-center mb-4 group">
+                                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center mr-3">
+                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                            </svg>
+                                        </div>
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Specialized Shipping Solutions</h3>
+                                    </a>
+                                    <p class="text-sm text-gray-600 mb-4">Custom solutions for unique needs</p>
+                                    <ul class="space-y-2 pl-13">
+                                        <li><a href="white-glove-delivery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            White-Glove Delivery
+                                        </a></li>
+                                        <li><a href="ltl-recovery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            LTL Recovery
+                                        </a></li>
+                                        <li><a href="warehousing-fulfillment.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Warehousing & Fulfillment Services
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Industries Mega Menu -->
+                    <div class="relative group">
+                        <a href="#industries" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            Industries
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[700px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-4">Industries We Serve</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="healthcare.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Healthcare
+                                        </a></li>
+                                        <li><a href="industrial-machinery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Industrial Machinery
+                                        </a></li>
+                                        <li><a href="military-government.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Military/Government
+                                        </a></li>
+                                        <li><a href="trade-show.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Trade Show
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-4">&nbsp;</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="turnarounds.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Turnarounds
+                                        </a></li>
+                                        <li><a href="food-processing.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Food Processing
+                                        </a></li>
+                                        <li><a href="automotive.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Automotive
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Customer Tools Mega Menu -->
+                    <div class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            Customer Tools
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[600px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">Customer Tools</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="track-order.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item p-2 rounded-lg hover:bg-gray-50">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Track an Order
+                                </a>
+                                <a href="schedule-shipment.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item p-2 rounded-lg hover:bg-gray-50">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Schedule a Shipment
+                                </a>
+                                <a href="book-ltl.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item p-2 rounded-lg hover:bg-gray-50">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Book an LTL / OnDemand Shipment
+                                </a>
+                                <a href="request-quote.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item p-2 rounded-lg hover:bg-gray-50">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Request a Quote
+                                </a>
+                                <a href="make-payment.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item p-2 rounded-lg hover:bg-gray-50">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Make a Payment
+                                </a>
+                                <a href="initiate-claim.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item p-2 rounded-lg hover:bg-gray-50">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Initiate a Claim
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Resources Mega Menu -->
+                    <div class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            Resources
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[400px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">Resources</h3>
+                            <ul class="space-y-3">
+                                <li><a href="blog.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Blog
+                                </a></li>
+                                <li><a href="testimonials.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Testimonials
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- About Us Mega Menu -->
+                    <div class="relative group">
+                        <a href="about.html" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[400px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">About Us</h3>
+                            <ul class="space-y-3">
+                                <li><a href="leadership-team.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Leadership Team
+                                </a></li>
+                                <li><a href="careers.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Careers
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="contact-us.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Contact Us</a>
+                    <a href="request-quote.html" class="bg-gradient-to-r from-primary to-primary-light text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all font-semibold">
+                        Request a Quote
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="lg:hidden text-gray-700 p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden lg:hidden border-t border-gray-200 bg-white" id="mobile-menu">
+            <div class="px-4 py-6 space-y-4">
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Services</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="domestic-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">Domestic Shipping</a>
+                        <a href="international-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">International Shipping</a>
+                        <div class="pl-4 space-y-1">
+                            <a href="international-air.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Air</a>
+                            <a href="international-ocean.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Ocean Import/Export</a>
+                            <a href="custom-services.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Custom Services</a>
+                        </div>
+                        <a href="specialized-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">Specialized Shipping Solutions</a>
+                        <div class="pl-4 space-y-1">
+                            <a href="white-glove-delivery.html" class="block text-gray-500 hover:text-primary text-sm py-1">• White-Glove Delivery</a>
+                            <a href="ltl-recovery.html" class="block text-gray-500 hover:text-primary text-sm py-1">• LTL Recovery</a>
+                            <a href="warehousing-fulfillment.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Warehousing & Fulfillment</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Industries</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="healthcare.html" class="block text-gray-600 hover:text-primary font-medium py-1">Healthcare</a>
+                        <a href="industrial-machinery.html" class="block text-gray-600 hover:text-primary font-medium py-1">Industrial Machinery</a>
+                        <a href="military-government.html" class="block text-gray-600 hover:text-primary font-medium py-1">Military/Government</a>
+                        <a href="trade-show.html" class="block text-gray-600 hover:text-primary font-medium py-1">Trade Show</a>
+                        <a href="turnarounds.html" class="block text-gray-600 hover:text-primary font-medium py-1">Turnarounds</a>
+                        <a href="food-processing.html" class="block text-gray-600 hover:text-primary font-medium py-1">Food Processing</a>
+                        <a href="automotive.html" class="block text-gray-600 hover:text-primary font-medium py-1">Automotive</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Customer Tools</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="track-order.html" class="block text-gray-600 hover:text-primary font-medium py-1">Track an Order</a>
+                        <a href="schedule-shipment.html" class="block text-gray-600 hover:text-primary font-medium py-1">Schedule a Shipment</a>
+                        <a href="book-ltl.html" class="block text-gray-600 hover:text-primary font-medium py-1">Book an LTL / OnDemand Shipment</a>
+                        <a href="request-quote.html" class="block text-gray-600 hover:text-primary font-medium py-1">Request a Quote</a>
+                        <a href="make-payment.html" class="block text-gray-600 hover:text-primary font-medium py-1">Make a Payment</a>
+                        <a href="initiate-claim.html" class="block text-gray-600 hover:text-primary font-medium py-1">Initiate a Claim</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Resources</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="blog.html" class="block text-gray-600 hover:text-primary font-medium py-1">Blog</a>
+                        <a href="testimonials.html" class="block text-gray-600 hover:text-primary font-medium py-1">Testimonials</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">About Us</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="leadership-team.html" class="block text-gray-600 hover:text-primary font-medium py-1">Leadership Team</a>
+                        <a href="careers.html" class="block text-gray-600 hover:text-primary font-medium py-1">Careers</a>
+                    </div>
+                </div>
+                <a href="contact-us.html" class="block text-gray-700 hover:text-primary font-medium py-2">Contact Us</a>
+                <a href="request-quote.html" class="block bg-gradient-to-r from-primary to-primary-light text-white px-6 py-3 rounded-lg text-center font-semibold">Request a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION - COMPLETELY REDESIGNED -->
+    <!-- ============================================ -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-primary-dark">
+        <!-- YouTube Video Background -->
+        <div id="video-container" class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+            <iframe 
+                id="hero-video"
+                src=""
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="pointer-events: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            </iframe>
+        </div>
+        
+        <!-- Gradient Overlay (keeps the color gradient) -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-primary-dark/80 z-[1]"></div>
+        
+        <!-- Dynamic animated background elements -->
+        <div class="absolute inset-0 overflow-hidden z-[2]">
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(30,126,52,0.3),transparent_50%)]"></div>
+            <div class="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(45,134,80,0.2),transparent_50%)]"></div>
+            <!-- Animated grid pattern -->
+            <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+            <!-- Floating orbs -->
+            <div class="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 left-20 w-96 h-96 bg-primary-light/15 rounded-full blur-3xl animate-pulse" style="animation-delay: 1.5s;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-[3] py-32">
+            <div class="text-center">
+                <!-- Main headline -->
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <span class="text-white">Logistics Solutions</span>
+                    <span class="block mt-4">
+                        <span class="gradient-text bg-gradient-to-r from-primary-light via-white to-primary-light bg-clip-text text-transparent">
+                            From People Who Care
+                        </span>
+                    </span>
+                    </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-2xl md:text-3xl text-gray-300 mb-6 leading-relaxed max-w-4xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+                    Time-definite, multi-modal shipping solutions that keep your business moving forward, delivered with exceptional care.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <a href="#contact" class="group relative bg-gradient-to-r from-primary via-primary-light to-primary text-white px-12 py-6 rounded-2xl hover:shadow-2xl transition-all transform hover:scale-105 font-bold text-lg flex items-center justify-center gap-3 overflow-hidden glow-effect">
+                        <span class="relative z-10 flex items-center gap-3">
+                            Get Started Today
+                            <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+                    <a href="#services" class="bg-white/10 backdrop-blur-md text-white px-12 py-6 rounded-2xl hover:bg-white/20 transition-all border-2 border-white/30 font-bold text-lg shadow-xl hover:shadow-2xl">
+                        Explore Services
+                    </a>
+                </div>
+                
+                <!-- Key stats in a modern grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all card-hover">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">98.9%</div>
+                        <div class="text-gray-300 font-semibold">On-Time Performance</div>
+                        <div class="text-gray-400 text-sm mt-1">Across All Modes</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all card-hover">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
+                        <div class="text-gray-300 font-semibold">Customer Support</div>
+                        <div class="text-gray-400 text-sm mt-1">Always Available</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all card-hover">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">25+</div>
+                        <div class="text-gray-300 font-semibold">Years Experience</div>
+                        <div class="text-gray-400 text-sm mt-1">Trusted Partner</div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+                
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FEATURED SERVICES PREVIEW -->
+    <!-- ============================================ -->
+    <section class="py-32 bg-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-0 w-96 h-96 bg-primary-light/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Complete Logistics
+                    <span class="block gradient-text">Solutions</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    From domestic to international, specialized to warehousing—we've got your shipping needs covered.
+                </p>
+            </div>
+            
+            <!-- Service cards in a modern layout -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <a href="domestic-shipping.html" class="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-gray-100 hover:border-primary transition-all duration-300 card-hover overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                    </svg>
+                                </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Domestic</h3>
+                        <p class="text-gray-600 mb-4">Nationwide air and ground shipping</p>
+                        <span class="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                            Learn More
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                            </div>
+                </a>
+                
+                <!-- Service 2 -->
+                <a href="international-shipping.html" class="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-gray-100 hover:border-primary transition-all duration-300 card-hover overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">International</h3>
+                        <p class="text-gray-600 mb-4">Global reach with customs expertise</p>
+                        <span class="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                            Learn More
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                            </div>
+                </a>
+                
+                <!-- Service 3 -->
+                <a href="specialized-shipping.html" class="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-gray-100 hover:border-primary transition-all duration-300 card-hover overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Specialized</h3>
+                        <p class="text-gray-600 mb-4">Custom solutions for unique needs</p>
+                        <span class="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                            Learn More
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                            </div>
+                </a>
+                
+                <!-- Service 4 -->
+                <a href="#contact" class="group relative bg-gradient-to-br from-primary to-primary-light rounded-3xl p-8 border-2 border-primary-dark transition-all duration-300 card-hover overflow-hidden text-white">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                    </svg>
+                                </div>
+                        <h3 class="text-2xl font-bold mb-3">Warehousing</h3>
+                        <p class="text-white/90 mb-4">Storage & fulfillment services</p>
+                        <span class="font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                            Learn More
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                            </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- KEY SERVICES SECTION -->
+    <!-- ============================================ -->
+    <section id="services" class="py-28 bg-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-light/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Your One-Stop Shop for
+                    <span class="block gradient-text">Shipping Solutions</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Comprehensive logistics solutions tailored to your business needs, delivered with care and precision.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Domestic Services -->
+                <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Domestic Shipping</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">With both air and ground capabilities, DBA gets your cargo where it needs to go on time and on budget.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">Domestic Ground & Air Shipping</span>
+                        </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">Emergency Shipping</span>
+                        </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">Same Day, Next Day, 2nd Day Options</span>
+                        </li>
+                    </ul>
+                        <a href="domestic-shipping.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group/link">
+                            Learn More
+                            <svg class="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- International Services -->
+                <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">International Shipping</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">From international customs to door-to-door delivery, DBA handles every stage of the overseas shipping process.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">International Air & Ocean</span>
+                        </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">Customs Services</span>
+                        </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">Door-to-Door Delivery</span>
+                        </li>
+                    </ul>
+                        <a href="international-shipping.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group/link">
+                            Learn More
+                            <svg class="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Specialized Services -->
+                <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 overflow-hidden md:col-span-2 lg:col-span-1">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Specialized Solutions</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">We do whatever it takes to move your shipment from point A to B, offering a wide range of specialized services.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">White Glove Deliveries</span>
+                        </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">LTL Recovery</span>
+                        </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm">Warehousing</span>
+                        </li>
+                    </ul>
+                        <a href="specialized-shipping.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group/link">
+                            Learn More
+                            <svg class="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- QUICK ACTIONS SECTION -->
+    <!-- ============================================ -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Quick Actions</h2>
+                <p class="text-gray-600">Everything you need, right at your fingertips</p>
+            </div>
+            <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="#contact" class="bg-white hover:bg-primary hover:text-white rounded-xl p-6 text-center transition-all border-2 border-gray-100 hover:border-primary shadow-sm hover:shadow-lg group">
+                    <div class="w-14 h-14 bg-primary/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-1">Request Quote</h4>
+                    <p class="text-xs text-gray-500 group-hover:text-white/80">Get pricing</p>
+                </a>
+                
+                <a href="#" class="bg-white hover:bg-primary hover:text-white rounded-xl p-6 text-center transition-all border-2 border-gray-100 hover:border-primary shadow-sm hover:shadow-lg group">
+                    <div class="w-14 h-14 bg-primary/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-1">Book Online</h4>
+                    <p class="text-xs text-gray-500 group-hover:text-white/80">Schedule now</p>
+                </a>
+                
+                <a href="#" class="bg-white hover:bg-primary hover:text-white rounded-xl p-6 text-center transition-all border-2 border-gray-100 hover:border-primary shadow-sm hover:shadow-lg group">
+                    <div class="w-14 h-14 bg-primary/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-1">Track Shipment</h4>
+                    <p class="text-xs text-gray-500 group-hover:text-white/80">Real-time updates</p>
+                </a>
+                
+                <a href="#" class="bg-white hover:bg-primary hover:text-white rounded-xl p-6 text-center transition-all border-2 border-gray-100 hover:border-primary shadow-sm hover:shadow-lg group">
+                    <div class="w-14 h-14 bg-primary/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-1">Pay Online</h4>
+                    <p class="text-xs text-gray-500 group-hover:text-white/80">Secure payment</p>
+                </a>
+                
+                <a href="#" class="bg-white hover:bg-primary hover:text-white rounded-xl p-6 text-center transition-all border-2 border-gray-100 hover:border-primary shadow-sm hover:shadow-lg group">
+                    <div class="w-14 h-14 bg-primary/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-1">Submit Claim</h4>
+                    <p class="text-xs text-gray-500 group-hover:text-white/80">File online</p>
+                </a>
+                
+                <a href="#contact" class="bg-white hover:bg-primary hover:text-white rounded-xl p-6 text-center transition-all border-2 border-gray-100 hover:border-primary shadow-sm hover:shadow-lg group">
+                    <div class="w-14 h-14 bg-primary/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-1">Contact Us</h4>
+                    <p class="text-xs text-gray-500 group-hover:text-white/80">Get in touch</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- WHY US / DIFFERENTIATORS SECTION -->
+    <!-- ============================================ -->
+    <section id="why-us" class="py-32 bg-white relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-light/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl"></div>
+        </div>
+        
+        <!-- Grid pattern overlay -->
+        <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(rgba(30, 126, 52, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 126, 52, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                    <span class="text-gray-900">DBA Goes the</span>
+                    <span class="block mt-2 bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+                        Extra Mile
+                    </span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Helpful service and high-level communication isn't just something we do. <span class="text-primary font-semibold">It's who we are.</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Out-of-the-Box Problem Solving -->
+                <div class="cool-feature-card group" data-index="0">
+                    <div class="cool-card-bg"></div>
+                    <div class="cool-card-content">
+                        <div class="cool-icon-container">
+                            <div class="cool-icon-inner">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <div class="cool-icon-ring"></div>
+                        </div>
+                        <h3 class="cool-title">Out-of-the-Box Problem Solving</h3>
+                        <p class="cool-description">
+                            When every minute matters, our experts are constantly innovating and streamlining the shipping process, helping you stay ahead of potential delays.
+                        </p>
+                        <div class="cool-accent-line"></div>
+                    </div>
+                </div>
+                
+                <!-- 24/7 Logistics Support -->
+                <div class="cool-feature-card group" data-index="1">
+                    <div class="cool-card-bg"></div>
+                    <div class="cool-card-content">
+                        <div class="cool-icon-container">
+                            <div class="cool-icon-inner">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="cool-icon-ring"></div>
+                        </div>
+                        <h3 class="cool-title">24/7 Logistics Support</h3>
+                        <p class="cool-description">
+                            With around-the-clock support, DBA provides real solutions from real people. When you call us, you get a live person on the phone—no corporate office, no answering machine.
+                        </p>
+                        <div class="cool-accent-line"></div>
+                    </div>
+                </div>
+                
+                <!-- Real-Time Cargo Tracking -->
+                <div class="cool-feature-card group" data-index="2">
+                    <div class="cool-card-bg"></div>
+                    <div class="cool-card-content">
+                        <div class="cool-icon-container">
+                            <div class="cool-icon-inner">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <div class="cool-icon-ring"></div>
+                        </div>
+                        <h3 class="cool-title">Real-Time Cargo Tracking</h3>
+                        <p class="cool-description">
+                            With an easy-to-use interface and data-driven analytics, our real-time tracking software provides full visibility into your shipment status.
+                        </p>
+                        <div class="cool-accent-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .cool-feature-card {
+                position: relative;
+                height: 100%;
+                min-height: 400px;
+            }
+            
+            .cool-card-bg {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, rgba(30, 126, 52, 0.05) 0%, rgba(45, 134, 80, 0.02) 100%);
+                border: 2px solid rgba(30, 126, 52, 0.15);
+                border-radius: 0;
+                clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+                transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                overflow: hidden;
+            }
+            
+            .cool-card-bg::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, rgba(30, 126, 52, 0.1) 0%, rgba(45, 134, 80, 0.05) 100%);
+                opacity: 0;
+                transition: opacity 0.6s;
+            }
+            
+            .cool-card-bg::after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, transparent, rgba(30, 126, 52, 0.1), transparent);
+                transform: rotate(45deg);
+                transition: transform 0.8s;
+            }
+            
+            .cool-feature-card:hover .cool-card-bg {
+                border-color: #1e7e34;
+                box-shadow: 0 0 40px rgba(30, 126, 52, 0.4), inset 0 0 40px rgba(30, 126, 52, 0.1);
+                transform: translateY(-12px) rotateX(5deg);
+            }
+            
+            .cool-feature-card:hover .cool-card-bg::before {
+                opacity: 1;
+            }
+            
+            .cool-feature-card:hover .cool-card-bg::after {
+                transform: rotate(45deg) translate(100%, 100%);
+            }
+            
+            .cool-card-content {
+                position: relative;
+                z-index: 2;
+                height: 100%;
+                padding: 40px 32px;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .cool-icon-container {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 32px;
+            }
+            
+            .cool-icon-inner {
+                position: relative;
+                z-index: 3;
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(135deg, #1e7e34 0%, #2d8650 100%);
+                clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 10px 30px rgba(30, 126, 52, 0.4);
+            }
+            
+            .cool-icon-ring {
+                position: absolute;
+                inset: -15px;
+                border: 2px solid rgba(30, 126, 52, 0.3);
+                clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+                transition: all 0.6s;
+            }
+            
+            .cool-feature-card:hover .cool-icon-inner {
+                transform: scale(1.15) rotate(10deg);
+                box-shadow: 0 15px 40px rgba(30, 126, 52, 0.6);
+            }
+            
+            .cool-feature-card:hover .cool-icon-ring {
+                border-color: #1e7e34;
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(30, 126, 52, 0.5);
+            }
+            
+            .cool-title {
+                font-size: 26px;
+                font-weight: 800;
+                color: #1f2937;
+                margin-bottom: 20px;
+                transition: all 0.6s;
+                line-height: 1.3;
+                letter-spacing: -0.5px;
+            }
+            
+            .cool-feature-card:hover .cool-title {
+                color: #1e7e34;
+                transform: translateX(8px);
+            }
+            
+            .cool-description {
+                font-size: 16px;
+                color: #6b7280;
+                line-height: 1.8;
+                flex-grow: 1;
+                transition: all 0.6s;
+            }
+            
+            .cool-feature-card:hover .cool-description {
+                color: #4b5563;
+            }
+            
+            .cool-accent-line {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #1e7e34, #2d8650, #1e7e34);
+                transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .cool-feature-card:hover .cool-accent-line {
+                width: 100%;
+            }
+            
+            @media (max-width: 768px) {
+                .cool-feature-card {
+                    min-height: 350px;
+                }
+                .cool-card-content {
+                    padding: 32px 24px;
+                }
+                .cool-icon-container {
+                    width: 80px;
+                    height: 80px;
+                    margin-bottom: 24px;
+                }
+                .cool-icon-inner {
+                    width: 80px;
+                    height: 80px;
+                }
+                .cool-title {
+                    font-size: 22px;
+                }
+                .cool-description {
+                    font-size: 15px;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- INDUSTRIES SECTION - WHEEL DESIGN -->
+    <!-- ============================================ -->
+    <section id="industries" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Industries We Serve
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Specialized logistics solutions tailored to the unique needs of diverse industries
+                </p>
+            </div>
+            
+            <!-- Industries List with Hover Images -->
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Left: Industries List -->
+                <div class="space-y-2">
+                    <a href="healthcare.html" class="industry-list-item group" data-industry="healthcare">
+                        <div class="flex items-center justify-between p-6 rounded-xl border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Healthcare</h3>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="industrial-machinery.html" class="industry-list-item group" data-industry="industrial">
+                        <div class="flex items-center justify-between p-6 rounded-xl border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Industrial Machinery</h3>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="military-government.html" class="industry-list-item group" data-industry="military">
+                        <div class="flex items-center justify-between p-6 rounded-xl border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Military & Government</h3>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="trade-show.html" class="industry-list-item group" data-industry="tradeshow">
+                        <div class="flex items-center justify-between p-6 rounded-xl border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Trade Show</h3>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="turnarounds.html" class="industry-list-item group" data-industry="turnarounds">
+                        <div class="flex items-center justify-between p-6 rounded-xl border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Turnarounds</h3>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="food-processing.html" class="industry-list-item group" data-industry="food">
+                        <div class="flex items-center justify-between p-6 rounded-xl border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Food Processing</h3>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="automotive.html" class="industry-list-item group" data-industry="automotive">
+                        <div class="flex items-center justify-between p-6 rounded-xl border-2 border-gray-200 hover:border-primary transition-all duration-300 hover:shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Automotive</h3>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Right: Image Display Area -->
+                <div class="sticky top-24">
+                    <div class="industry-image-container relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] bg-gray-100">
+                        <div id="industry-image" class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-light/20 flex items-center justify-center transition-all duration-500">
+                            <div id="placeholder-content" class="text-center p-8 transition-opacity duration-500">
+                                <svg class="w-24 h-24 text-primary/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <p class="text-gray-400 text-lg font-semibold">Hover over an industry to view</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="text-center mt-20">
+                <p class="text-gray-600 mb-6 text-lg">Don't see your industry? We serve many more.</p>
+                <a href="contact-us.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary-light text-white px-8 py-4 rounded-xl hover:shadow-xl transition-all font-semibold">
+                    Contact Us to Learn More
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <style>
+            .industry-list-item {
+                text-decoration: none;
+                display: block;
+            }
+            
+            .industry-image-container {
+                min-height: 500px;
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .industry-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            }
+            
+            @media (max-width: 1024px) {
+                .industry-image-container {
+                    min-height: 400px;
+                    margin-top: 2rem;
+                }
+            }
+        </style>
+        
+        <script>
+            // Industry images mapping
+            const industryImages = {
+                healthcare: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
+                industrial: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop',
+                military: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop',
+                tradeshow: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop',
+                turnarounds: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop',
+                food: 'https://images.unsplash.com/photo-1556910103-2c027ebaf42e?w=800&h=600&fit=crop',
+                automotive: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop'
+            };
+            
+            // Setup industry hover effects
+            document.addEventListener('DOMContentLoaded', function() {
+                const industryItems = document.querySelectorAll('.industry-list-item');
+                const imageContainer = document.getElementById('industry-image');
+                const placeholderContent = document.getElementById('placeholder-content');
+                
+                industryItems.forEach(item => {
+                    const industry = item.getAttribute('data-industry');
+                    const imageUrl = industryImages[industry];
+                    
+                    if (imageUrl) {
+                        item.addEventListener('mouseenter', function() {
+                            // Hide placeholder
+                            if (placeholderContent) {
+                                placeholderContent.style.opacity = '0';
+                            }
+                            
+                            // Create or get image element
+                            let img = imageContainer.querySelector('img');
+                            if (!img) {
+                                img = document.createElement('img');
+                                img.className = 'industry-image absolute inset-0 w-full h-full object-cover';
+                                img.alt = '';
+                                imageContainer.appendChild(img);
+                            }
+                            
+                            // Fade out, change src, fade in
+                            img.style.opacity = '0';
+                            img.style.transform = 'scale(1.1)';
+                            setTimeout(() => {
+                                img.src = imageUrl;
+                                img.onload = function() {
+                                    img.style.opacity = '1';
+                                    img.style.transform = 'scale(1)';
+                                };
+                            }, 200);
+                        });
+                        
+                        item.addEventListener('mouseleave', function() {
+                            const img = imageContainer.querySelector('img');
+                            if (img) {
+                                img.style.opacity = '0';
+                                img.style.transform = 'scale(1.1)';
+                            }
+                            // Show placeholder again
+                            if (placeholderContent) {
+                                setTimeout(() => {
+                                    placeholderContent.style.opacity = '1';
+                                }, 300);
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TESTIMONIALS SECTION -->
+    <!-- ============================================ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wide mb-4 block">Client Success</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Choose DBA</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>
+                </div>
+                    <p class="text-gray-700 mb-6 text-lg italic">
+                        "DBA has the experience and industry knowledge with expedited freight to handle any assignment. I know I can trust them to do it right."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            KG
+                </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Kelly G.</p>
+                            <p class="text-sm text-gray-600">Materials Manager, Koch Industries</p>
+                </div>
+                </div>
+            </div>
+            
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg italic">
+                        "DBA is extremely easy to reach and there's no nonsense. They tell me what's happening and how they're going to address it, all for a competitive cost."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            BG
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Bill G.</p>
+                            <p class="text-sm text-gray-600">Founder, Breit Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT / REQUEST QUOTE SECTION -->
+    <!-- ============================================ -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-primary via-primary-light to-primary-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-xl text-green-100">
+                    Request a personalized quote for your shipping needs
+                </p>
+            </div>
+            
+            <form class="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="firstName" class="block text-sm font-semibold mb-2">First Name *</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                            placeholder="John"
+                            required
+                        >
+                    </div>
+                    <div>
+                        <label for="lastName" class="block text-sm font-semibold mb-2">Last Name *</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                            placeholder="Doe"
+                            required
+                        >
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="phone" class="block text-sm font-semibold mb-2">Phone *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                            placeholder="(555) 123-4567"
+                            required
+                        >
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-semibold mb-2">Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                            placeholder="your.email@example.com"
+                            required
+                        >
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="zipCode" class="block text-sm font-semibold mb-2">Zip Code *</label>
+                    <input 
+                        type="text" 
+                        id="zipCode" 
+                        name="zipCode" 
+                        class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                        placeholder="12345"
+                        required
+                    >
+                </div>
+                
+                <div class="text-center">
+                    <button 
+                        type="submit" 
+                        class="bg-white text-primary px-10 py-4 rounded-xl hover:bg-gray-100 transition-all transform hover:scale-105 font-bold text-lg shadow-2xl w-full md:w-auto"
+                    >
+                        Submit Request
+                    </button>
+                </div>
+            </form>
+            
+            <div class="mt-12 grid md:grid-cols-2 gap-8 text-center">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Location</h3>
+                    <p class="text-green-100">123 Main Street<br>City, State 12345</p>
+                    <p class="text-green-100 mt-2">456 Business Avenue<br>Another City, ST 67890</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact</h3>
+                    <p class="text-green-100 mb-2">Phone: (555) 123-4567</p>
+                    <p class="text-green-100">Operations: operations@example.com</p>
+                    <p class="text-green-100">Sales: sales@example.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-900 to-black text-gray-300 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(30, 126, 52, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 126, 52, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="relative z-10">
+            <!-- Main Footer Content -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <!-- Top Section: Company Info & CTA -->
+                <div class="grid lg:grid-cols-3 gap-12 mb-16 pb-16 border-b border-gray-800">
+                    <!-- Company Info -->
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg">
+                                <span class="text-white font-bold text-2xl">DBA</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Distribution By Air</h3>
+                                <p class="text-sm text-gray-400">A Radiant Logistics company</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-6 leading-relaxed max-w-2xl text-lg">
+                            DBA makes every shipment count with time-definite, multi-modal solutions. We provide logistics solutions from people who care.
+                        </p>
+                        <!-- Social Links -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-all border border-gray-700 hover:border-primary">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-all border border-gray-700 hover:border-primary">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-all border border-gray-700 hover:border-primary">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Section -->
+                    <div class="bg-gradient-to-br from-primary/20 to-primary-light/20 backdrop-blur-sm rounded-2xl p-8 border border-primary/30">
+                        <h4 class="text-white font-bold text-xl mb-4">Ready to Get Started?</h4>
+                        <p class="text-gray-300 mb-6">Get a quote for your next shipment today.</p>
+                        <a href="request-quote.html" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-primary to-primary-light text-white px-6 py-4 rounded-xl font-semibold hover:shadow-xl transition-all transform hover:scale-105">
+                            Request a Quote
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-10 mb-16">
+                    <!-- Services Column 1 -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">
+                            Services
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="domestic-shipping.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Domestic Shipping
+                            </a></li>
+                            <li><a href="international-shipping.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                International Shipping
+                            </a></li>
+                            <li><a href="international-air.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                International Air
+                            </a></li>
+                            <li><a href="international-ocean.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                International Ocean
+                            </a></li>
+                            <li><a href="custom-services.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Custom Services
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Services Column 2 -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">
+                            &nbsp;
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="specialized-shipping.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Specialized Shipping
+                            </a></li>
+                            <li><a href="white-glove-delivery.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                White-Glove Delivery
+                            </a></li>
+                            <li><a href="ltl-recovery.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                LTL Recovery
+                            </a></li>
+                            <li><a href="warehousing-fulfillment.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Warehousing & Fulfillment
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industries -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">
+                            Industries
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="healthcare.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Healthcare
+                            </a></li>
+                            <li><a href="industrial-machinery.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Industrial Machinery
+                            </a></li>
+                            <li><a href="military-government.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Military & Government
+                            </a></li>
+                            <li><a href="trade-show.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Trade Show
+                            </a></li>
+                            <li><a href="turnarounds.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Turnarounds
+                            </a></li>
+                            <li><a href="food-processing.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Food Processing
+                            </a></li>
+                            <li><a href="automotive.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Automotive
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Customer Tools & Resources -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">
+                            Tools & Resources
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="track-order.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Track an Order
+                            </a></li>
+                            <li><a href="make-payment.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Make Payment
+                            </a></li>
+                            <li><a href="request-quote.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Request Quote
+                            </a></li>
+                            <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Blog
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- About & Contact -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">
+                            About & Contact
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                About Us
+                            </a></li>
+                            <li><a href="leadership-team.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Leadership Team
+                            </a></li>
+                            <li><a href="careers.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Careers
+                            </a></li>
+                            <li><a href="testimonials.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Testimonials
+                            </a></li>
+                            <li><a href="contact-us.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Contact Us
+                            </a></li>
+                            <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Home
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                        <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-400">
+                            <p>&copy; 2024 Distribution By Air. All rights reserved.</p>
+                            <div class="flex space-x-6">
+                                <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                                <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                                <a href="#" class="hover:text-primary transition-colors">Sitemap</a>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <p>Trusted Since 1999 • 25+ Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll and mobile menu -->
+    <script>
+        // YouTube Video Background Setup
+        // Paste your YouTube URL here (supports both full URLs and video IDs)
+        const youtubeUrl = 'https://www.youtube.com/watch?v=q5UWVgxt3gk';
+        // Examples:
+        // 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        // 'https://youtu.be/dQw4w9WgXcQ'
+        // 'dQw4w9WgXcQ' (just the video ID)
+        
+        // Extract video ID from URL or use as-is if it's already an ID
+        function extractVideoId(url) {
+            if (!url || url === 'YOUR_YOUTUBE_URL_HERE') return null;
+            
+            // If it's already just an ID (no slashes or dots), return it
+            if (!url.includes('/') && !url.includes('.')) {
+                return url;
+            }
+            
+            // Extract from various YouTube URL formats
+            const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/);
+            return match ? match[1] : null;
+        }
+        
+        const youtubeVideoId = extractVideoId(youtubeUrl);
+        
+        if (youtubeVideoId) {
+            const heroVideo = document.getElementById('hero-video');
+            if (heroVideo) {
+                // Create YouTube embed URL with autoplay, mute, loop, and no controls
+                const embedUrl = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&mute=1&loop=1&playlist=${youtubeVideoId}&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&start=0&end=0&playsinline=1`;
+                heroVideo.src = embedUrl;
+                
+                // Make video fully responsive and properly aligned
+                function updateVideoSize() {
+                    const videoContainer = document.getElementById('video-container');
+                    if (!videoContainer || !heroVideo) return;
+                    
+                    const containerWidth = videoContainer.offsetWidth;
+                    const containerHeight = videoContainer.offsetHeight;
+                    const videoAspectRatio = 16 / 9;
+                    const containerAspectRatio = containerWidth / containerHeight;
+                    
+                    let videoWidth, videoHeight;
+                    
+                    if (containerAspectRatio > videoAspectRatio) {
+                        // Container is wider than video - fit to height and add width
+                        videoHeight = containerHeight;
+                        videoWidth = containerHeight * videoAspectRatio;
+                    } else {
+                        // Container is taller than video - fit to width and add height
+                        videoWidth = containerWidth;
+                        videoHeight = containerWidth / videoAspectRatio;
+                    }
+                    
+                    // Ensure video covers the entire container (add 10% buffer to prevent edges showing)
+                    if (videoWidth < containerWidth) {
+                        videoWidth = containerWidth * 1.1;
+                        videoHeight = videoWidth / videoAspectRatio;
+                    }
+                    if (videoHeight < containerHeight) {
+                        videoHeight = containerHeight * 1.1;
+                        videoWidth = videoHeight * videoAspectRatio;
+                    }
+                    
+                    heroVideo.style.width = `${videoWidth}px`;
+                    heroVideo.style.height = `${videoHeight}px`;
+                    heroVideo.style.top = '50%';
+                    heroVideo.style.left = '50%';
+                    heroVideo.style.transform = 'translate(-50%, -50%)';
+                }
+                
+                // Update on load and resize
+                window.addEventListener('load', updateVideoSize);
+                updateVideoSize();
+                window.addEventListener('resize', updateVideoSize);
+                window.addEventListener('orientationchange', () => {
+                    setTimeout(updateVideoSize, 100);
+                });
+                
+                // Also update when video loads
+                heroVideo.addEventListener('load', updateVideoSize);
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Form submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your request! We will contact you shortly.');
+                form.reset();
+            });
+        }
+
+        // Header fade on scroll
+        const mainNav = document.getElementById('main-nav');
+        if (mainNav) {
+            let lastScrollTop = 0;
+            const fadeStart = 50; // Start fading after 50px scroll
+            const fadeEnd = 200; // Fully faded at 200px scroll
+            
+            function updateNavOpacity() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop <= fadeStart) {
+                    // At top - fully opaque
+                    mainNav.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+                } else if (scrollTop >= fadeEnd) {
+                    // Scrolled down - 50% transparent
+                    mainNav.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+                } else {
+                    // In between - gradual fade
+                    const scrollProgress = (scrollTop - fadeStart) / (fadeEnd - fadeStart);
+                    const opacity = 1 - (scrollProgress * 0.5); // Fade from 1 to 0.5
+                    mainNav.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+                }
+                
+                lastScrollTop = scrollTop;
+            }
+            
+            // Initial state
+            updateNavOpacity();
+            
+            // Update on scroll with throttling for performance
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateNavOpacity();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
