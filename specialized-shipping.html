@@ -50,17 +50,15 @@
     </script>
 </head>
 <body class="bg-white text-gray-900 antialiased">
-    <!-- Navigation -->
-    <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100 overflow-visible">
+    <nav id="main-nav" class="bg-white backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100 overflow-visible transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-visible">
             <div class="flex justify-between items-center h-20 relative">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center shadow-lg">
-                        <span class="text-white font-bold text-xl">DBA</span>
-                    </div>
-                    <div class="hidden sm:block">
-                        <span class="text-lg font-bold text-gray-900">Distribution By Air</span>
-                        <p class="text-xs text-gray-500">Logistics Solutions</p>
+                <a href="index.html" class="flex items-center">
+                    <img src="images/logodba.png" alt="Distribution By Air Logo" class="h-56 md:h-64 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden items-center space-x-3" style="display: none;">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white font-bold text-xl">DBA</span>
+                        </div>
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center space-x-6">
@@ -74,100 +72,70 @@
                         </a>
                         <div class="mega-menu absolute top-full left-0 mt-4 w-[900px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
                             <div class="grid grid-cols-3 gap-8">
-                                <!-- Column 1: Domestic Shipping -->
+                                <!-- Column 1: Domestic Shipping with submenu -->
                                 <div>
                                     <a href="domestic-shipping.html" class="flex items-center mb-4 group">
-                                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center mr-3">
-                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                            </svg>
-                                        </div>
-                                        <h3 class="font-bold text-gray-900">Domestic Shipping</h3>
-                                    </div>
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Domestic Shipping</h3>
+                                    </a>
                                     <p class="text-sm text-gray-600 mb-4">Nationwide air and ground shipping solutions</p>
-                                    <ul class="space-y-2">
-                                        <li><a href="domestic-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Domestic Ground & Air
+                                    <ul class="space-y-3">
+                                        <li><a href="domestic-ground-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Domestic Ground Shipping
                                         </a></li>
-                                        <li><a href="domestic-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                        <li><a href="domestic-air-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Domestic Air Shipping
+                                        </a></li>
+                                        <li><a href="emergency-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
                                             Emergency Shipping
                                         </a></li>
-                                        <li><a href="domestic-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Same Day & Next Day
-                                        </a></li>
-                                        <li><a href="domestic-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            LTL & Deferred Options
-                                        </a></li>
                                     </ul>
-                                    <a href="domestic-shipping.html" class="inline-block mt-4 text-sm font-semibold text-primary hover:underline">Learn More →</a>
                                 </div>
                                 
-                                <!-- Column 2: International Services -->
+                                <!-- Column 2: International Shipping with submenu -->
                                 <div>
-                                    <div class="flex items-center mb-4">
-                                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center mr-3">
-                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                            </svg>
-                                        </div>
-                                        <h3 class="font-bold text-gray-900">International Shipping</h3>
-                                    </div>
+                                    <a href="international-shipping.html" class="flex items-center mb-4 group">
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">International Shipping</h3>
+                                    </a>
                                     <p class="text-sm text-gray-600 mb-4">Global logistics with customs expertise</p>
-                                    <ul class="space-y-2">
-                                        <li><a href="international-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            International Air & Ocean
+                                    <ul class="space-y-3">
+                                        <li><a href="international-air.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Air
                                         </a></li>
-                                        <li><a href="international-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Customs Services
+                                        <li><a href="international-ocean.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Ocean Import/Export
                                         </a></li>
-                                        <li><a href="international-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Door-to-Door Delivery
-                                        </a></li>
-                                        <li><a href="international-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Import & Export
+                                        <li><a href="custom-services.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Custom Services
                                         </a></li>
                                     </ul>
-                                    <a href="international-shipping.html" class="inline-block mt-4 text-sm font-semibold text-primary hover:underline">Learn More →</a>
                                 </div>
                                 
-                                <!-- Column 3: Specialized Solutions -->
+                                <!-- Column 3: Specialized Shipping Solutions with submenu -->
                                 <div>
-                                    <div class="flex items-center mb-4">
-                                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center mr-3">
-                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                            </svg>
-                                        </div>
-                                        <h3 class="font-bold text-gray-900">Specialized Solutions</h3>
-                                    </div>
+                                    <a href="specialized-shipping.html" class="flex items-center mb-4 group">
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Specialized Shipping Solutions</h3>
+                                    </a>
                                     <p class="text-sm text-gray-600 mb-4">Custom solutions for unique needs</p>
-                                    <ul class="space-y-2">
-                                        <li><a href="specialized-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            White Glove Deliveries
+                                    <ul class="space-y-3">
+                                        <li><a href="white-glove-delivery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            White-Glove Delivery
                                         </a></li>
-                                        <li><a href="specialized-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                        <li><a href="ltl-recovery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
                                             LTL Recovery
                                         </a></li>
-                                        <li><a href="specialized-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Warehousing
-                                        </a></li>
-                                        <li><a href="specialized-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Hazardous Cargo
+                                        <li><a href="warehousing-fulfillment.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Warehousing & Fulfillment Services
                                         </a></li>
                                     </ul>
-                                    <a href="specialized-shipping.html" class="inline-block mt-4 text-sm font-semibold text-primary hover:underline">Learn More →</a>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +143,7 @@
                     
                     <!-- Industries Mega Menu -->
                     <div class="relative group">
-                        <a href="index.html#industries" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                        <a href="#industries" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
                             Industries
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -186,19 +154,19 @@
                                 <div>
                                     <h3 class="font-bold text-gray-900 mb-4">Industries We Serve</h3>
                                     <ul class="space-y-3">
-                                        <li><a href="index.html#industries" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                        <li><a href="healthcare.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
                                             <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Healthcare & Life Sciences
+                                            Healthcare
                                         </a></li>
-                                        <li><a href="index.html#industries" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                        <li><a href="industrial-machinery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
                                             <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
                                             Industrial Machinery
                                         </a></li>
-                                        <li><a href="index.html#industries" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                        <li><a href="military-government.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
                                             <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Military & Government
+                                            Military/Government
                                         </a></li>
-                                        <li><a href="index.html#industries" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                        <li><a href="trade-show.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
                                             <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
                                             Trade Show
                                         </a></li>
@@ -207,15 +175,15 @@
                                 <div>
                                     <h3 class="font-bold text-gray-900 mb-4">&nbsp;</h3>
                                     <ul class="space-y-3">
-                                        <li><a href="index.html#industries" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                        <li><a href="turnarounds.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
                                             <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Turnaround & Shutdowns
+                                            Turnarounds
                                         </a></li>
-                                        <li><a href="index.html#industries" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                        <li><a href="food-processing.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
                                             <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
                                             Food Processing
                                         </a></li>
-                                        <li><a href="index.html#industries" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                        <li><a href="automotive.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
                                             <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
                                             Automotive
                                         </a></li>
@@ -225,67 +193,97 @@
                         </div>
                     </div>
                     
-                    <!-- Company Mega Menu -->
+                    <!-- Customer Tools Mega Menu -->
                     <div class="relative group">
-                        <a href="about.html" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
-                            Company
+                        <a href="#" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            Customer Tools
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </a>
                         <div class="mega-menu absolute top-full left-0 mt-4 w-[600px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
-                            <div class="grid grid-cols-2 gap-8">
-                                <div>
-                                    <h3 class="font-bold text-gray-900 mb-4">About DBA</h3>
-                                    <ul class="space-y-3">
-                                        <li><a href="about.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            About Us
-                                        </a></li>
-                                        <li><a href="testimonials.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Testimonials
-                                        </a></li>
-                                        <li><a href="careers.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Careers
-                                        </a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-gray-900 mb-4">Resources</h3>
-                                    <ul class="space-y-3">
-                                        <li><a href="track-order.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Track Order
-                                        </a></li>
-                                        <li><a href="make-payment.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Make Payment
-                                        </a></li>
-                                        <li><a href="request-quote.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
-                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                            Request Quote
-                                        </a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <h3 class="font-bold text-gray-900 mb-4">Customer Tools</h3>
+                            <ul class="space-y-3">
+                                <li><a href="https://globalship.dbaco.com/caad/login/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Track an Order
+                                </a></li>
+                                <li><a href="https://globalship.dbaco.com/caad/login/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Schedule a Shipment
+                                </a></li>
+                                <li><a href="https://dba.7lfreight.com/login" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Book an LTL / OnDemand Shipment
+                                </a></li>
+                                <li><a href="request-quote.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Request a Quote
+                                </a></li>
+                                <li><a href="https://payments.dbaco.com/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Make a Payment
+                                </a></li>
+                                <li><a href="https://dbaco.com/submit-a-claim" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Initiate a Claim
+                                </a></li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <a href="index.html#why-us" class="text-gray-700 hover:text-primary transition-colors font-medium">Why DBA</a>
-                    <a href="index.html#contact" class="text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
+                    <!-- Resources Mega Menu -->
+                    <div class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            Resources
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[400px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">Resources</h3>
+                            <ul class="space-y-3">
+                                <li><a href="blog.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Blog
+                                </a></li>
+                                <li><a href="testimonials.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Testimonials
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- About Us Mega Menu -->
+                    <div class="relative group">
+                        <a href="about.html" class="text-gray-700 hover:text-primary transition-colors font-medium flex items-center py-2">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[400px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">About Us</h3>
+                            <ul class="space-y-3">
+                                <li><a href="leadership-team.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Leadership Team
+                                </a></li>
+                                <li><a href="careers.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Careers
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="contact-us.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Contact Us</a>
                     <a href="request-quote.html" class="bg-gradient-to-r from-primary to-primary-light text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all font-semibold">
                         Request a Quote
                     </a>
                 </div>
-                    <a href="index.html#industries" class="text-gray-700 hover:text-primary transition-colors font-medium">Industries</a>
-                    <a href="index.html#why-us" class="text-gray-700 hover:text-primary transition-colors font-medium">Why DBA</a>
-                    <a href="about.html" class="text-gray-700 hover:text-primary transition-colors font-medium">About</a>
-                    <a href="testimonials.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Testimonials</a>
-                    <a href="index.html#contact" class="text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
-                    <a href="request-quote.html" class="bg-gradient-to-r from-primary to-primary-light text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all font-semibold">Request a Quote</a>
-                </div>
+                <!-- Mobile menu button -->
                 <button class="lg:hidden text-gray-700 p-2" id="mobile-menu-btn">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -293,12 +291,65 @@
                 </button>
             </div>
         </div>
+        <!-- Mobile menu -->
         <div class="hidden lg:hidden border-t border-gray-200 bg-white" id="mobile-menu">
             <div class="px-4 py-6 space-y-4">
-                <a href="index.html#services" class="block text-gray-700 hover:text-primary font-medium py-2">Services</a>
-                <a href="index.html#industries" class="block text-gray-700 hover:text-primary font-medium py-2">Industries</a>
-                <a href="index.html#why-us" class="block text-gray-700 hover:text-primary font-medium py-2">Why DBA</a>
-                <a href="index.html#contact" class="block text-gray-700 hover:text-primary font-medium py-2">Contact</a>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Services</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="domestic-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">Domestic Shipping</a>
+                        <a href="international-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">International Shipping</a>
+                        <div class="pl-4 space-y-1">
+                            <a href="international-air.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Air</a>
+                            <a href="international-ocean.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Ocean Import/Export</a>
+                            <a href="custom-services.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Custom Services</a>
+                        </div>
+                        <a href="specialized-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">Specialized Shipping Solutions</a>
+                        <div class="pl-4 space-y-1">
+                            <a href="white-glove-delivery.html" class="block text-gray-500 hover:text-primary text-sm py-1">• White-Glove Delivery</a>
+                            <a href="ltl-recovery.html" class="block text-gray-500 hover:text-primary text-sm py-1">• LTL Recovery</a>
+                            <a href="warehousing-fulfillment.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Warehousing & Fulfillment</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Industries</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="healthcare.html" class="block text-gray-600 hover:text-primary font-medium py-1">Healthcare</a>
+                        <a href="industrial-machinery.html" class="block text-gray-600 hover:text-primary font-medium py-1">Industrial Machinery</a>
+                        <a href="military-government.html" class="block text-gray-600 hover:text-primary font-medium py-1">Military/Government</a>
+                        <a href="trade-show.html" class="block text-gray-600 hover:text-primary font-medium py-1">Trade Show</a>
+                        <a href="turnarounds.html" class="block text-gray-600 hover:text-primary font-medium py-1">Turnarounds</a>
+                        <a href="food-processing.html" class="block text-gray-600 hover:text-primary font-medium py-1">Food Processing</a>
+                        <a href="automotive.html" class="block text-gray-600 hover:text-primary font-medium py-1">Automotive</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Customer Tools</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="https://globalship.dbaco.com/caad/login/" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Track an Order</a>
+                        <a href="https://globalship.dbaco.com/caad/login/" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Schedule a Shipment</a>
+                        <a href="https://dba.7lfreight.com/login" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Book an LTL / OnDemand Shipment</a>
+                        <a href="request-quote.html" class="block text-gray-600 hover:text-primary font-medium py-1">Request a Quote</a>
+                        <a href="https://payments.dbaco.com/" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Make a Payment</a>
+                        <a href="https://dbaco.com/submit-a-claim" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Initiate a Claim</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Resources</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="blog.html" class="block text-gray-600 hover:text-primary font-medium py-1">Blog</a>
+                        <a href="testimonials.html" class="block text-gray-600 hover:text-primary font-medium py-1">Testimonials</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">About Us</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="leadership-team.html" class="block text-gray-600 hover:text-primary font-medium py-1">Leadership Team</a>
+                        <a href="careers.html" class="block text-gray-600 hover:text-primary font-medium py-1">Careers</a>
+                    </div>
+                </div>
+                <a href="contact-us.html" class="block text-gray-700 hover:text-primary font-medium py-2">Contact Us</a>
                 <a href="request-quote.html" class="block bg-gradient-to-r from-primary to-primary-light text-white px-6 py-3 rounded-lg text-center font-semibold">Request a Quote</a>
             </div>
         </div>
@@ -424,15 +475,15 @@
                             <span class="text-white font-bold text-xl">DBA</span>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white">Distribution By Air</h3>
-                            <p class="text-xs text-gray-400">A Radiant Logistics company</p>
+                            
+                            
                         </div>
                     </div>
                     <p class="text-gray-400 mb-6 leading-relaxed max-w-md">DBA makes every shipment count with time-definite, multi-modal solutions.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Services</h4>
-                    <ul class="space-y-2">
+                    <ul class="space-y-3">
                         <li><a href="domestic-shipping.html" class="hover:text-white transition-colors">Domestic Shipping</a></li>
                         <li><a href="international-shipping.html" class="hover:text-white transition-colors">International Shipping</a></li>
                         <li><a href="specialized-shipping.html" class="hover:text-white transition-colors">Specialized Solutions</a></li>
@@ -440,16 +491,22 @@
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
+                    <ul class="space-y-3">
                         <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                         <li><a href="request-quote.html" class="hover:text-white transition-colors">Request Quote</a></li>
-                        <li><a href="track-order.html" class="hover:text-white transition-colors">Track Order</a></li>
+                        <li><a href="https://globalship.dbaco.com/caad/login/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Track Order</a></li>
                         <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2024 Distribution By Air. All rights reserved.</p>
+                <p>&copy; 2024 Distribution By Air. All rights reserved.</p>            <!-- Powered By -->
+            <div class="border-t border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="text-center text-sm text-gray-500">
+                        <p>Powered by <a href="https://www.autera.us/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">Autera</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

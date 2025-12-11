@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track an Order | Distribution By Air</title>
+    <title>Domestic Ground Shipping | Distribution By Air</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,20 @@
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         html { overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e7e34 0%, #2d8650 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
         nav, nav > div, nav > div > div {
             overflow: visible !important;
         }
@@ -21,7 +35,59 @@
         .group:hover .mega-menu {
             transform: translateX(-50%) !important;
         }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1e7e34', dark: '#155724', light: '#2d8650' },
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domestic Shipping | Distribution By Air</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        html { overflow-x: hidden; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e7e34 0%, #2d8650 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        /* Ensure mega menu can overflow */
+        nav, nav > div, nav > div > div {
+            overflow: visible !important;
+        }
+        .mega-menu {
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        .group:hover .mega-menu {
+            transform: translateX(-50%) !important;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -61,7 +127,7 @@
                             <div class="grid grid-cols-3 gap-8">
                                 <!-- Column 1: Domestic Shipping with submenu -->
                                 <div>
-                                    <a href="domestic-shipping.html" class="flex items-center mb-4 group">
+                                    <a href="domestic-ground-shipping.html" class="flex items-center mb-4 group">
                                         <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Domestic Shipping</h3>
                                     </a>
                                     <p class="text-sm text-gray-600 mb-4">Nationwide air and ground shipping solutions</p>
@@ -342,19 +408,237 @@
         </div>
     </nav>
 
-    <!-- Redirect Script -->
+    <!-- Hero -->
+    <section class="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Domestic Ground Shipping</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Reliable ground transportation across the United States with flexible scheduling and dedicated equipment options.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Nationwide Ground Transportation Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    DBA provides comprehensive ground shipping services across all 50 states, offering flexible scheduling options and dedicated equipment to meet your specific transportation needs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Nationwide Coverage</h3>
+                    <p class="text-gray-600">Pick up and delivery to any zip code in the United States. Our extensive network ensures your shipment reaches its destination reliably.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Flexible Scheduling</h3>
+                    <p class="text-gray-600">Choose from 3-5 day deferred service or LTL options. We work around your schedule to minimize disruption to your operations.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Dedicated Equipment</h3>
+                    <p class="text-gray-600">Access to 53' trailers, 24' box trucks, and flatbeds. We match the right equipment to your cargo requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Service Options</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                3-5 Day Deferred Service
+                            </h3>
+                            <p class="text-gray-600">Cost-effective ground shipping for non-urgent shipments. Perfect for regular inventory replenishment and standard deliveries.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                LTL (Less Than Truckload)
+                            </h3>
+                            <p class="text-gray-600">Ideal for smaller shipments that don't require a full truck. We consolidate your freight with other shipments for maximum efficiency.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Dedicated Equipment
+                            </h3>
+                            <p class="text-gray-600">Exclusive use of 53' trailers, 24' box trucks, or flatbeds for your shipment. Ensures your cargo travels alone with no co-mingling.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Equipment Types</h2>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold mb-2">53' Trailers</h3>
+                            <p class="text-gray-600 text-sm">High-capacity trailers perfect for large volume shipments, palletized freight, and standard cargo.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold mb-2">24' Box Trucks</h3>
+                            <p class="text-gray-600 text-sm">Versatile medium-sized trucks ideal for smaller loads, local deliveries, and shipments requiring easier access.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold mb-2">Flatbeds</h3>
+                            <p class="text-gray-600 text-sm">Open-deck trailers for oversized cargo, machinery, construction materials, and items requiring top or side loading.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose DBA Ground Shipping?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Reliable Service</h3>
+                    <p class="text-gray-600 text-sm">Consistent on-time delivery with 98.9% performance rate</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Cost-Effective</h3>
+                    <p class="text-gray-600 text-sm">Competitive pricing with transparent rates and no hidden fees</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Fast Response</h3>
+                    <p class="text-gray-600 text-sm">Quick quotes and rapid booking for urgent shipments</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">24/7 Support</h3>
+                    <p class="text-gray-600 text-sm">Round-the-clock customer service and tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gradient-to-r from-primary via-primary-light to-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Ship Ground?</h2>
+            <p class="text-xl text-green-100 mb-8">Get a competitive quote for your ground shipping needs</p>
+            <a href="request-quote.html" class="bg-white text-primary px-8 py-4 rounded-xl hover:bg-gray-100 transition-all font-bold text-lg shadow-2xl inline-block">
+                Request a Quote
+            </a>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">DBA</span>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed max-w-md">DBA makes every shipment count with time-definite, multi-modal solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="domestic-shipping.html" class="hover:text-white transition-colors">Domestic Shipping</a></li>
+                        <li><a href="international-shipping.html" class="hover:text-white transition-colors">International Shipping</a></li>
+                        <li><a href="specialized-shipping.html" class="hover:text-white transition-colors">Specialized Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="request-quote.html" class="hover:text-white transition-colors">Request Quote</a></li>
+                        <li><a href="https://globalship.dbaco.com/caad/login/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Track Order</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Distribution By Air. All rights reserved.</p>            <!-- Powered By -->
+            <div class="border-t border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="text-center text-sm text-gray-500">
+                        <p>Powered by <a href="https://www.autera.us/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">Autera</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // Mobile menu toggle
         document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
             document.getElementById('mobile-menu')?.classList.toggle('hidden');
         });
         
-        // Redirect to login page after page loads
-        window.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                window.location.href = "https://globalship.dbaco.com/caad/login/";
-            }, 100);
-        });
+        // Header scroll transparency
+        const mainNav = document.getElementById('main-nav');
+        if (mainNav) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    mainNav.classList.add('bg-white/50', 'backdrop-blur-lg');
+                    mainNav.classList.remove('bg-white');
+                } else {
+                    mainNav.classList.remove('bg-white/50', 'backdrop-blur-lg');
+                    mainNav.classList.add('bg-white');
+                }
+            });
+        }
     </script>
 </body>
 </html>

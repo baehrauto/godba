@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track an Order | Distribution By Air</title>
+    <title>Emergency Shipping | Distribution By Air</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,20 @@
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         html { overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e7e34 0%, #2d8650 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
         nav, nav > div, nav > div > div {
             overflow: visible !important;
         }
@@ -21,7 +35,59 @@
         .group:hover .mega-menu {
             transform: translateX(-50%) !important;
         }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#1e7e34', dark: '#155724', light: '#2d8650' },
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domestic Shipping | Distribution By Air</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        html { overflow-x: hidden; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e7e34 0%, #2d8650 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        /* Ensure mega menu can overflow */
+        nav, nav > div, nav > div > div {
+            overflow: visible !important;
+        }
+        .mega-menu {
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        .group:hover .mega-menu {
+            transform: translateX(-50%) !important;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -61,7 +127,7 @@
                             <div class="grid grid-cols-3 gap-8">
                                 <!-- Column 1: Domestic Shipping with submenu -->
                                 <div>
-                                    <a href="domestic-shipping.html" class="flex items-center mb-4 group">
+                                    <a href="emergency-shipping.html" class="flex items-center mb-4 group">
                                         <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Domestic Shipping</h3>
                                     </a>
                                     <p class="text-sm text-gray-600 mb-4">Nationwide air and ground shipping solutions</p>
@@ -342,19 +408,262 @@
         </div>
     </nav>
 
-    <!-- Redirect Script -->
+    <!-- Hero -->
+    <section class="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Emergency Shipping</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    When every minute counts, DBA provides urgent shipping solutions with 24/7 availability and rapid response times.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">24/7 Emergency Shipping Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    When critical situations arise, DBA is ready. Our emergency shipping services are available around the clock to handle your most urgent transportation needs with rapid response and guaranteed expedited handling.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">24/7 Availability</h3>
+                    <p class="text-gray-600">Emergency services available 24 hours a day, 7 days a week, including holidays. We're always ready when you need us most.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Rapid Response</h3>
+                    <p class="text-gray-600">Immediate dispatch and expedited handling. Our emergency team responds within minutes, not hours.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary/5 to-primary-light/5 rounded-2xl p-8 border border-primary/10 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Priority Handling</h3>
+                    <p class="text-gray-600">Highest priority processing at every stage. Your emergency shipment gets immediate attention from pickup to delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Emergency Service Options</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Same-Day Emergency
+                            </h3>
+                            <p class="text-gray-600 mb-3">For critical situations requiring same-day delivery. Available 24/7 with immediate pickup and expedited transit.</p>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Immediate pickup available</li>
+                                <li>• Same-day delivery guarantee</li>
+                                <li>• Real-time tracking and updates</li>
+                                <li>• Dedicated emergency coordinator</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Next-Day Emergency
+                            </h3>
+                            <p class="text-gray-600 mb-3">Urgent shipments requiring next-day delivery. Priority handling with guaranteed delivery times.</p>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Next business day delivery</li>
+                                <li>• Priority air or ground service</li>
+                                <li>• Expedited processing</li>
+                                <li>• 24/7 customer support</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                                Hotshot Service
+                            </h3>
+                            <p class="text-gray-600 mb-3">Dedicated vehicle for your emergency shipment. Direct, non-stop service with a dedicated driver.</p>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Dedicated vehicle and driver</li>
+                                <li>• Direct, non-stop service</li>
+                                <li>• Fastest possible transit time</li>
+                                <li>• Continuous tracking and updates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">When to Use Emergency Shipping</h2>
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold mb-2 flex items-center">
+                                <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                Critical Parts & Equipment
+                            </h3>
+                            <p class="text-gray-600 text-sm">When production lines are down or critical equipment fails, emergency shipping gets you back online fast.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold mb-2 flex items-center">
+                                <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                                Medical & Healthcare
+                            </h3>
+                            <p class="text-gray-600 text-sm">Urgent medical supplies, pharmaceuticals, and life-saving equipment require immediate transportation.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold mb-2 flex items-center">
+                                <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Legal & Compliance
+                            </h3>
+                            <p class="text-gray-600 text-sm">Time-sensitive legal documents, contracts, and compliance materials that can't wait.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold mb-2 flex items-center">
+                                <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                Trade Show Emergencies
+                            </h3>
+                            <p class="text-gray-600 text-sm">Last-minute trade show materials, missing displays, or replacement equipment for events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">How Emergency Shipping Works</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">1</div>
+                    <h3 class="font-bold text-lg mb-2">Call 24/7</h3>
+                    <p class="text-gray-600 text-sm">Contact our emergency hotline anytime, day or night</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">2</div>
+                    <h3 class="font-bold text-lg mb-2">Immediate Dispatch</h3>
+                    <p class="text-gray-600 text-sm">We dispatch a vehicle or book air freight immediately</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">3</div>
+                    <h3 class="font-bold text-lg mb-2">Priority Handling</h3>
+                    <p class="text-gray-600 text-sm">Your shipment receives highest priority at every stage</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">4</div>
+                    <h3 class="font-bold text-lg mb-2">Fast Delivery</h3>
+                    <p class="text-gray-600 text-sm">Expedited delivery with real-time tracking updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gradient-to-r from-primary via-primary-light to-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Have an Emergency Shipment?</h2>
+            <p class="text-xl text-green-100 mb-8">Call our 24/7 emergency hotline or request a quote online</p>
+            <a href="request-quote.html" class="bg-white text-primary px-8 py-4 rounded-xl hover:bg-gray-100 transition-all font-bold text-lg shadow-2xl inline-block">
+                Request a Quote
+            </a>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">DBA</span>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed max-w-md">DBA makes every shipment count with time-definite, multi-modal solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="domestic-shipping.html" class="hover:text-white transition-colors">Domestic Shipping</a></li>
+                        <li><a href="international-shipping.html" class="hover:text-white transition-colors">International Shipping</a></li>
+                        <li><a href="specialized-shipping.html" class="hover:text-white transition-colors">Specialized Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="request-quote.html" class="hover:text-white transition-colors">Request Quote</a></li>
+                        <li><a href="https://globalship.dbaco.com/caad/login/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Track Order</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Distribution By Air. All rights reserved.</p>            <!-- Powered By -->
+            <div class="border-t border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="text-center text-sm text-gray-500">
+                        <p>Powered by <a href="https://www.autera.us/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">Autera</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // Mobile menu toggle
         document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
             document.getElementById('mobile-menu')?.classList.toggle('hidden');
         });
         
-        // Redirect to login page after page loads
-        window.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                window.location.href = "https://globalship.dbaco.com/caad/login/";
-            }, 100);
-        });
+        // Header scroll transparency
+        const mainNav = document.getElementById('main-nav');
+        if (mainNav) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    mainNav.classList.add('bg-white/50', 'backdrop-blur-lg');
+                    mainNav.classList.remove('bg-white');
+                } else {
+                    mainNav.classList.remove('bg-white/50', 'backdrop-blur-lg');
+                    mainNav.classList.add('bg-white');
+                }
+            });
+        }
     </script>
 </body>
 </html>
