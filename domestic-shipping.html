@@ -13,7 +13,7 @@
         html { overflow-x: hidden; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
         .gradient-text {
-            background: linear-gradient(135deg, #1e7e34 0%, #1e7e34 100%);
+            background: linear-gradient(135deg, #1e7e34 0%, #2d8650 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -381,19 +381,256 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    
+    <!-- Hero - Simplified -->
+    <section class="relative overflow-visible pt-32 pb-24" style="background: #0a0a0a;">
+        <!-- Abstract Gradient Circles Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Large circle 1 - Top right -->
+            <div class="absolute -top-40 -right-40 w-[800px] h-[800px] rounded-full opacity-60 blur-3xl" style="background: radial-gradient(circle, rgba(30, 126, 52, 0.4) 0%, rgba(30, 126, 52, 0.1) 50%, transparent 70%);"></div>
+            
+            <!-- Large circle 2 - Center left -->
+            <div class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 w-[900px] h-[900px] rounded-full opacity-50 blur-3xl" style="background: radial-gradient(circle, rgba(45, 134, 80, 0.5) 0%, rgba(45, 134, 80, 0.2) 40%, transparent 70%);"></div>
+            
+            <!-- Large circle 3 - Bottom center -->
+            <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full opacity-55 blur-3xl" style="background: radial-gradient(circle, rgba(30, 126, 52, 0.45) 0%, rgba(30, 126, 52, 0.15) 50%, transparent 75%);"></div>
+            
+            <!-- Medium circle 4 - Top left -->
+            <div class="absolute top-20 left-20 w-[500px] h-[500px] rounded-full opacity-40 blur-2xl" style="background: radial-gradient(circle, rgba(45, 134, 80, 0.4) 0%, rgba(45, 134, 80, 0.1) 60%, transparent 80%);"></div>
+            
+            <!-- Medium circle 5 - Right side -->
+            <div class="absolute top-1/3 right-20 w-[600px] h-[600px] rounded-full opacity-45 blur-2xl" style="background: radial-gradient(circle, rgba(30, 126, 52, 0.35) 0%, rgba(30, 126, 52, 0.1) 50%, transparent 75%);"></div>
+            
+            <!-- Small accent circle -->
+            <div class="absolute bottom-40 right-1/4 w-[400px] h-[400px] rounded-full opacity-35 blur-xl" style="background: radial-gradient(circle, rgba(45, 134, 80, 0.3) 0%, rgba(45, 134, 80, 0.05) 60%, transparent 80%);"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.15]" style="padding-bottom: 0.3em; overflow: visible;">
+                    <span class="block text-white pb-2">Domestic</span>
+                    <span class="block" style="background: linear-gradient(135deg, #1e7e34 0%, #2d8650 50%, #4ade80 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding-bottom: 0.2em; overflow: visible;">Shipping</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-gray-300 mb-10 leading-relaxed">Comprehensive nationwide shipping solutions with air and ground freight options, time-definite delivery, and complete visibility.</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="request-quote.html" class="bg-gradient-to-r from-primary to-primary-light text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transform hover:scale-105 transition-all">
+                        Get a Quote
+                    </a>
+                    <a href="#services" class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg border-2 border-primary hover:bg-primary/5 transition-all">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom wave -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
 
-    
+    <!-- Key Features - Simplified -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Why Choose</span>
+                    <span class="block gradient-text">Domestic Shipping?</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-light/10 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl border-l-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Nationwide Coverage</h3>
+                        <p class="text-gray-700 leading-relaxed">Complete coverage across all 50 states. Air and ground freight options to connect you with destinations throughout the United States.</p>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-light/10 to-primary/10 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl border-l-4 border-primary-light">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Time-Definite Delivery</h3>
+                        <p class="text-gray-700 leading-relaxed">Guaranteed delivery times that meet your schedule. Express and standard options with reliable transit times across the country.</p>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-light/10 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl border-l-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Complete Solutions</h3>
+                        <p class="text-gray-700 leading-relaxed">Air freight for speed, ground freight for economy. We provide the right solution for your timeline and budget requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details - Simplified -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" id="services">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Service</span>
+                    <span class="block gradient-text">Options</span>
+                </h2>
+            </div>
+            <div class="space-y-6 mb-16">
+                <div class="relative overflow-hidden rounded-3xl group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary-light/5 to-primary/5"></div>
+                    <div class="relative p-10 border-l-4 border-primary">
+                        <div class="flex items-start gap-6">
+                            <div class="text-6xl font-bold gradient-text opacity-20">01</div>
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-gray-900">Domestic Air Freight</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">Fast air freight services for time-sensitive shipments. Express and standard options with same-day and next-day delivery available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-light/5 via-primary/5 to-primary-light/5"></div>
+                    <div class="relative p-10 border-l-4 border-primary-light">
+                        <div class="flex items-start gap-6">
+                            <div class="text-6xl font-bold gradient-text opacity-20">02</div>
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-gray-900">Domestic Ground Freight</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">Cost-effective ground shipping for large volume cargo. LTL and FTL options with complete door-to-door services across the nation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary-light/5 to-primary/5"></div>
+                    <div class="relative p-10 border-l-4 border-primary">
+                        <div class="flex items-start gap-6">
+                            <div class="text-6xl font-bold gradient-text opacity-20">03</div>
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-gray-900">Emergency Shipping</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">Urgent shipping solutions for critical time-sensitive deliveries. Same-day and expedited options when you need it most.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="relative p-8 bg-white rounded-2xl shadow-lg border-t-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Express Delivery</h3>
+                    <p class="text-gray-700">Fastest delivery options with same-day and next-day service available for urgent shipments.</p>
+                </div>
+                <div class="relative p-8 bg-white rounded-2xl shadow-lg border-t-4 border-primary-light">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Standard Delivery</h3>
+                    <p class="text-gray-700">Reliable standard shipping with competitive transit times and cost-effective pricing.</p>
+                </div>
+                <div class="relative p-8 bg-white rounded-2xl shadow-lg border-t-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Tracking & Visibility</h3>
+                    <p class="text-gray-700">Complete shipment tracking and real-time updates from pickup to final delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CTA -->
-    <section class="py-16 text-white" style="background: linear-gradient(135deg, #1e7e34 0%, #1e7e34 100%);">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Ship?</h2>
-            <p class="text-xl text-white/90 mb-8">Get a competitive quote for your domestic shipping needs</p>
-            <a href="request-quote.html" class="bg-white text-primary px-8 py-4 rounded-xl hover:bg-gray-100 transition-all font-bold text-lg shadow-2xl inline-block">
-                Request a Quote
-            </a>
+    <section class="py-20 bg-gradient-to-br from-primary via-primary-light to-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);"></div>
+        </div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Ship Domestically?</h2>
+            <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed">Get a competitive quote for your domestic shipping needs. Our team is ready to provide reliable service to destinations nationwide.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="request-quote.html" class="bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition-all font-bold text-lg shadow-2xl transform hover:scale-105">
+                    Request a Quote
+                </a>
+                <a href="contact-us.html" class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition-all font-bold text-lg">
+                    Speak to a Coordinator
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20" style="background-color: #EAF6EF;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Why Choose DBA for Domestic Shipping?
+                </h2>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                            <span class="text-3xl font-bold text-primary">1</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Time-Definite Guarantees</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            We guarantee delivery times that meet your schedule. No guessing, no delays—just reliable, on-time delivery when you need it. Our time-definite service ensures your shipments arrive exactly when promised.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                            <span class="text-3xl font-bold text-primary">2</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">True Door-to-Door Service</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            We coordinate every step from origin pickup to final delivery. No need to manage multiple carriers or track separate shipments—one call to DBA handles your entire domestic shipment from start to finish.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                            <span class="text-3xl font-bold text-primary">3</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Complete Visibility & Control</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Real-time tracking and updates from pickup to delivery. Our advanced tracking systems give you complete visibility into your shipment's status, so you always know where your cargo is and when it will arrive.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary via-primary-light to-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);"></div>
+        </div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Ship Domestically?</h2>
+            <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed">Get a competitive quote for your domestic shipping needs. Our team is ready to provide reliable service to destinations nationwide.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="request-quote.html" class="bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition-all font-bold text-lg shadow-2xl transform hover:scale-105">
+                    Request a Quote
+                </a>
+                <a href="contact-us.html" class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition-all font-bold text-lg">
+                    Speak to a Coordinator
+                </a>
+            </div>
         </div>
     </section>
 
