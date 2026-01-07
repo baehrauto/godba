@@ -23,13 +23,10 @@
         }
         h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
         .gradient-text {
-            background: linear-gradient(135deg, #1e7e34 0%, #1e7e34 100%);
+            background: linear-gradient(135deg, #1e7e34 0%, #2d8650 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-        .-gradient {
-            background: linear-gradient(135deg, #1e7e34 0%, #1e7e34 100%);
         }
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -44,7 +41,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: { DEFAULT: '#1e7e34', dark: '#1e7e34', light: '#2d8650' },
+                        primary: { DEFAULT: '#1e7e34', dark: '#155724', light: '#2d8650' },
                         accent: '#f59e0b',
                     }
                 }
@@ -54,14 +51,587 @@
 </head>
 <body class="bg-white text-gray-900 antialiased">
     <nav id="main-nav" class="bg-white backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100 overflow-visible transition-all duration-300">
+        <div class="max-w-7xl mx-auto pr-4 sm:pr-6 lg:pr-8 relative overflow-visible">
+            <div class="flex items-center h-20 relative">
+                <!-- Logo - Very Left -->
+                <a href="index.html" class="flex items-center flex-shrink-0 ml-0">
+                    <img src="images/logodba.png" alt="Distribution By Air Logo" class="h-56 md:h-64 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden items-center space-x-3" style="display: none;">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white font-bold text-xl">DBA</span>
+                </div>
+                </div>
+                </a>
+                
+                <!-- Navigation Items - Center -->
+                <div class="hidden lg:flex items-center space-x-4 flex-1 justify-center">
+                    <!-- Services Mega Menu -->
+                    <div class="relative group">
+                        <a href="#services" class="text-gray-700 hover:text-primary transition-colors text-sm font-medium flex items-center py-2">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[900px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <div class="grid grid-cols-3 gap-8">
+                                <!-- Column 1: Domestic Shipping with submenu -->
+                                <div>
+                                    <a href="domestic-shipping.html" class="flex items-center mb-4 group">
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Domestic Shipping</h3>
+                                    </a>
+                                    <p class="text-sm text-gray-600 mb-4">Nationwide air and ground shipping solutions</p>
+                                    <ul class="space-y-3">
+                                        <li><a href="domestic-ground-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Domestic Ground Shipping
+                                        </a></li>
+                                        <li><a href="domestic-air-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Domestic Air Shipping
+                                        </a></li>
+                                        <li><a href="emergency-shipping.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Emergency Shipping
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Column 2: International Shipping with submenu -->
+                                <div>
+                                    <a href="international-shipping.html" class="flex items-center mb-4 group">
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">International Shipping</h3>
+                                    </a>
+                                    <p class="text-sm text-gray-600 mb-4">Global logistics with customs expertise</p>
+                                    <ul class="space-y-3">
+                                        <li><a href="international-air.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Air
+                                        </a></li>
+                                        <li><a href="international-ocean.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Ocean Import/Export
+                                        </a></li>
+                                        <li><a href="custom-services.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Custom Services
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Column 3: Specialized Shipping Solutions with submenu -->
+                                <div>
+                                    <a href="specialized-shipping.html" class="flex items-center mb-4 group">
+                                        <h3 class="font-bold text-gray-900 group-hover:text-primary transition-colors">Specialized Shipping Solutions</h3>
+                                    </a>
+                                    <p class="text-sm text-gray-600 mb-4">Custom solutions for unique needs</p>
+                                    <ul class="space-y-3">
+                                        <li><a href="white-glove-delivery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            White-Glove Delivery
+                                        </a></li>
+                                        <li><a href="ltl-recovery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            LTL Recovery
+                                        </a></li>
+                                        <li><a href="warehousing-fulfillment.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Warehousing & Fulfillment Services
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Industries Mega Menu -->
+                    <div class="relative group">
+                        <a href="#industries" class="text-gray-700 hover:text-primary transition-colors text-sm font-medium flex items-center py-2">
+                            Industries
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[700px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-4">Industries We Serve</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="healthcare.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Healthcare
+                                        </a></li>
+                                        <li><a href="industrial-machinery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Industrial Machinery
+                                        </a></li>
+                                        <li><a href="military-government.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Military/Government
+                                        </a></li>
+                                        <li><a href="trade-show.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Trade Show
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-4">&nbsp;</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="turnarounds.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Turnarounds
+                                        </a></li>
+                                        <li><a href="food-processing.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Food Processing
+                                        </a></li>
+                                        <li><a href="automotive.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Automotive
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Customer Tools Mega Menu -->
+                    <div class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-primary transition-colors text-sm font-medium flex items-center py-2">
+                            Customer Tools
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[600px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">Customer Tools</h3>
+                            <ul class="space-y-3">
+                                <li><a href="https://dbaco.com/track" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Track an Order
+                                </a></li>
+                                <li><a href="https://dbaco.com/track" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Schedule a Shipment
+                                </a></li>
+                                <li><a href="https://dba.7lfreight.com/login" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Book an LTL / OnDemand Shipment
+                                </a></li>
+                                <li><a href="request-quote.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                        Request a Quote
+                                </a></li>
+                                <li><a href="https://payments.dbaco.com/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Make a Payment
+                                </a></li>
+                                <li><a href="https://dbaco.com/submit-a-claim" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Initiate a Claim
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Resources Mega Menu -->
+                    <div class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-primary transition-colors text-sm font-medium flex items-center py-2">
+                            Resources
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[400px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">Resources</h3>
+                            <ul class="space-y-3">
+                                <li><a href="blog.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Blog
+                                </a></li>
+                                <li><a href="testimonials.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Testimonials
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- About Us Mega Menu -->
+                    <div class="relative group">
+                        <a href="about.html" class="text-gray-700 hover:text-primary transition-colors text-sm font-medium flex items-center py-2">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[400px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <h3 class="font-bold text-gray-900 mb-4">About Us</h3>
+                            <ul class="space-y-3">
+                                <li><a href="leadership-team.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Leadership Team
+                                </a></li>
+                                <li><a href="careers.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                    <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                    Careers
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Search, Request Quote -->
+                <div class="hidden lg:flex items-center space-x-3 flex-shrink-0 ml-auto">
+                    <!-- Search Bar -->
+                    <div class="relative">
+                        <input type="search" id="header-search" placeholder="Track a shipment" class="w-40 px-3 py-1.5 pl-8 pr-3 text-xs border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                        <svg class="w-4 h-4 text-gray-400 absolute left-2 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    
+                    <!-- Request Quote - Very Right -->
+                    <a href="request-quote.html" class="bg-gradient-to-r from-primary to-primary-light text-white px-4 py-1.5 rounded-lg hover:shadow-lg transition-all text-sm font-semibold whitespace-nowrap">
+                        Request a Quote
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="lg:hidden text-gray-700 p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden lg:hidden border-t border-gray-200 bg-white" id="mobile-menu">
+            <div class="px-4 py-6 space-y-4">
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Services</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="domestic-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">Domestic Shipping</a>
+                        <a href="international-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">International Shipping</a>
+                        <div class="pl-4 space-y-1">
+                            <a href="international-air.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Air</a>
+                            <a href="international-ocean.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Ocean Import/Export</a>
+                            <a href="custom-services.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Custom Services</a>
+                        </div>
+                        <a href="specialized-shipping.html" class="block text-gray-600 hover:text-primary font-medium py-1">Specialized Shipping Solutions</a>
+                        <div class="pl-4 space-y-1">
+                            <a href="white-glove-delivery.html" class="block text-gray-500 hover:text-primary text-sm py-1">• White-Glove Delivery</a>
+                            <a href="ltl-recovery.html" class="block text-gray-500 hover:text-primary text-sm py-1">• LTL Recovery</a>
+                            <a href="warehousing-fulfillment.html" class="block text-gray-500 hover:text-primary text-sm py-1">• Warehousing & Fulfillment</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Industries</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="healthcare.html" class="block text-gray-600 hover:text-primary font-medium py-1">Healthcare</a>
+                        <a href="industrial-machinery.html" class="block text-gray-600 hover:text-primary font-medium py-1">Industrial Machinery</a>
+                        <a href="military-government.html" class="block text-gray-600 hover:text-primary font-medium py-1">Military/Government</a>
+                        <a href="trade-show.html" class="block text-gray-600 hover:text-primary font-medium py-1">Trade Show</a>
+                        <a href="turnarounds.html" class="block text-gray-600 hover:text-primary font-medium py-1">Turnarounds</a>
+                        <a href="food-processing.html" class="block text-gray-600 hover:text-primary font-medium py-1">Food Processing</a>
+                        <a href="automotive.html" class="block text-gray-600 hover:text-primary font-medium py-1">Automotive</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Customer Tools</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="https://dbaco.com/track" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Track an Order</a>
+                        <a href="https://dbaco.com/track" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Schedule a Shipment</a>
+                        <a href="https://dba.7lfreight.com/login" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Book an LTL / OnDemand Shipment</a>
+                        <a href="request-quote.html" class="block text-gray-600 hover:text-primary font-medium py-1">Request a Quote</a>
+                        <a href="https://payments.dbaco.com/" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Make a Payment</a>
+                        <a href="https://dbaco.com/submit-a-claim" target="_blank" rel="noopener noreferrer" class="block text-gray-600 hover:text-primary font-medium py-1">Initiate a Claim</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">Resources</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="blog.html" class="block text-gray-600 hover:text-primary font-medium py-1">Blog</a>
+                        <a href="testimonials.html" class="block text-gray-600 hover:text-primary font-medium py-1">Testimonials</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-semibold mb-2">About Us</p>
+                    <div class="pl-4 space-y-2">
+                        <a href="leadership-team.html" class="block text-gray-600 hover:text-primary font-medium py-1">Leadership Team</a>
+                        <a href="careers.html" class="block text-gray-600 hover:text-primary font-medium py-1">Careers</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Search Bar -->
+                <div class="relative">
+                    <input type="search" id="mobile-header-search" placeholder="Track a shipment" class="w-full px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                    <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                
+                <a href="request-quote.html" class="block bg-gradient-to-r from-primary to-primary-light text-white px-6 py-3 rounded-lg text-center font-semibold">Request a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero - Simplified -->
+    <section class="relative overflow-visible pt-32 pb-24" style="background: #0a0a0a;">
+        <!-- Abstract Gradient Circles Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Large circle 1 - Top right -->
+            <div class="absolute -top-40 -right-40 w-[800px] h-[800px] rounded-full opacity-60 blur-3xl" style="background: radial-gradient(circle, rgba(30, 126, 52, 0.4) 0%, rgba(30, 126, 52, 0.1) 50%, transparent 70%);"></div>
+            
+            <!-- Large circle 2 - Center left -->
+            <div class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 w-[900px] h-[900px] rounded-full opacity-50 blur-3xl" style="background: radial-gradient(circle, rgba(45, 134, 80, 0.5) 0%, rgba(45, 134, 80, 0.2) 40%, transparent 70%);"></div>
+            
+            <!-- Large circle 3 - Bottom center -->
+            <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full opacity-55 blur-3xl" style="background: radial-gradient(circle, rgba(30, 126, 52, 0.45) 0%, rgba(30, 126, 52, 0.15) 50%, transparent 75%);"></div>
+            
+            <!-- Medium circle 4 - Top left -->
+            <div class="absolute top-20 left-20 w-[500px] h-[500px] rounded-full opacity-40 blur-2xl" style="background: radial-gradient(circle, rgba(45, 134, 80, 0.4) 0%, rgba(45, 134, 80, 0.1) 60%, transparent 80%);"></div>
+            
+            <!-- Medium circle 5 - Right side -->
+            <div class="absolute top-1/3 right-20 w-[600px] h-[600px] rounded-full opacity-45 blur-2xl" style="background: radial-gradient(circle, rgba(30, 126, 52, 0.35) 0%, rgba(30, 126, 52, 0.1) 50%, transparent 75%);"></div>
+            
+            <!-- Small accent circle -->
+            <div class="absolute bottom-40 right-1/4 w-[400px] h-[400px] rounded-full opacity-35 blur-xl" style="background: radial-gradient(circle, rgba(45, 134, 80, 0.3) 0%, rgba(45, 134, 80, 0.05) 60%, transparent 80%);"></div>
+        </div>
         
+        <!-- Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.15]" style="padding-bottom: 0.3em; overflow: visible;">
+                    <span class="block text-white pb-2">Warehousing &</span>
+                    <span class="block" style="background: linear-gradient(135deg, #1e7e34 0%, #2d8650 50%, #4ade80 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding-bottom: 0.2em; overflow: visible;">Fulfillment</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-gray-300 mb-10 leading-relaxed">TSA-approved, CTPAT-certified, and Customs-bonded warehouse near BWI. Secure storage, duty-deferred inventory, pick-pack-ship, and last-mile control.</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="request-quote.html" class="bg-gradient-to-r from-primary to-primary-light text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transform hover:scale-105 transition-all">
+                        Get a Quote
+                    </a>
+                    <a href="#services" class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg border-2 border-primary hover:bg-primary/5 transition-all">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom wave -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+            </svg>
         </div>
     </section>
 
-    <footer class="bg-gradient-to-br from-gray-900 via-gray-900 to-black text-gray-300 relative overflow-hidden">
+    <!-- Key Features - Simplified -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Why Choose</span>
+                    <span class="block gradient-text">Our Warehousing?</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-light/10 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl border-l-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Certified & Secure</h3>
+                        <p class="text-gray-700 leading-relaxed">TSA-approved, CTPAT-certified, and Customs-bonded facility near BWI. Your inventory is protected with the highest security standards.</p>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-light/10 to-primary/10 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl border-l-4 border-primary-light">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Duty-Deferred Inventory</h3>
+                        <p class="text-gray-700 leading-relaxed">Store imported goods without paying duties until they're needed. Save cash flow and maintain inventory flexibility with our bonded warehouse.</p>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-light/10 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl border-l-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Complete Fulfillment</h3>
+                        <p class="text-gray-700 leading-relaxed">Pick, pack, and ship services with last-mile control. Full order fulfillment from our warehouse to your customers' doors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Service Details - Simplified -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" id="services">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Service</span>
+                    <span class="block gradient-text">Options</span>
+                </h2>
+            </div>
+            <div class="space-y-6 mb-16">
+                <div class="relative overflow-hidden rounded-3xl group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary-light/5 to-primary/5"></div>
+                    <div class="relative p-10 border-l-4 border-primary">
+                        <div class="flex items-start gap-6">
+                            <div class="text-6xl font-bold gradient-text opacity-20">01</div>
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-gray-900">Secure Storage</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">TSA-approved, CTPAT-certified, and Customs-bonded warehouse facility. Climate-controlled and secure storage for your valuable inventory with 24/7 security monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-light/5 via-primary/5 to-primary-light/5"></div>
+                    <div class="relative p-10 border-l-4 border-primary-light">
+                        <div class="flex items-start gap-6">
+                            <div class="text-6xl font-bold gradient-text opacity-20">02</div>
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-gray-900">Order Fulfillment</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">Complete pick, pack, and ship services. Professional order fulfillment with custom packaging, labeling, and shipping to meet your exact specifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary-light/5 to-primary/5"></div>
+                    <div class="relative p-10 border-l-4 border-primary">
+                        <div class="flex items-start gap-6">
+                            <div class="text-6xl font-bold gradient-text opacity-20">03</div>
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-gray-900">Inventory Management</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">Real-time inventory tracking and management. Complete visibility into your stock levels with detailed reporting and automated reorder alerts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="relative p-8 bg-white rounded-2xl shadow-lg border-t-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Bonded Warehouse</h3>
+                    <p class="text-gray-700">Store imported goods without paying duties until needed. Customs-bonded facility for duty-deferred inventory management.</p>
+                </div>
+                <div class="relative p-8 bg-white rounded-2xl shadow-lg border-t-4 border-primary-light">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Last-Mile Control</h3>
+                    <p class="text-gray-700">Complete control over final delivery with integrated shipping solutions. Coordinate last-mile delivery from our warehouse.</p>
+                </div>
+                <div class="relative p-8 bg-white rounded-2xl shadow-lg border-t-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Strategic Location</h3>
+                    <p class="text-gray-700">Warehouse facility near BWI airport for fast access to air and ground shipping networks. Prime location for distribution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Background decoration -->
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary via-primary-light to-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);"></div>
+        </div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Optimize Your Inventory?</h2>
+            <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed">Get a competitive quote for our warehousing and fulfillment services. Our team is ready to help you save cash and move faster.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="request-quote.html" class="bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition-all font-bold text-lg shadow-2xl transform hover:scale-105">
+                    Request a Quote
+                </a>
+                <a href="contact-us.html" class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition-all font-bold text-lg">
+                    Speak to a Coordinator
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20" style="background-color: #EAF6EF;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Why Choose DBA for Warehousing & Fulfillment?
+                </h2>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                            <span class="text-3xl font-bold text-primary">1</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Save Cash Flow</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Our Customs-bonded warehouse allows you to store imported goods without paying duties until they're needed. Defer duty payments and improve your cash flow while maintaining inventory flexibility.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                            <span class="text-3xl font-bold text-primary">2</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Move Faster</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Strategic location near BWI with integrated shipping solutions means faster order fulfillment and delivery. Our pick-pack-ship services and last-mile control keep your operations moving efficiently.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                            <span class="text-3xl font-bold text-primary">3</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Complete Security & Compliance</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            TSA-approved, CTPAT-certified, and Customs-bonded facility ensures your inventory meets all security and compliance standards. 24/7 security monitoring and climate-controlled storage protect your valuable goods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary via-primary-light to-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);"></div>
+        </div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Optimize Your Inventory?</h2>
+            <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed">Get a competitive quote for our warehousing and fulfillment services. Our team is ready to help you save cash and move faster.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="request-quote.html" class="bg-white text-primary px-10 py-5 rounded-xl hover:bg-gray-100 transition-all font-bold text-lg shadow-2xl transform hover:scale-105">
+                    Request a Quote
+                </a>
+                <a href="contact-us.html" class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white/10 transition-all font-bold text-lg">
+                    Speak to a Coordinator
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <footer class="bg-gradient-to-br from-gray-900 via-gray-900 to-black text-gray-300 relative overflow-hidden">
+        <!-- Background decoration -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: linear-gradient(rgba(30, 126, 52, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 126, 52, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
         </div>
@@ -293,5 +863,53 @@
             </div>
         </div>
     </footer>
+
+    
+    <script>
+        // Search functionality - Track a shipment
+        function trackShipment(inputId) {
+            const input = document.getElementById(inputId);
+            if (input) {
+                const query = input.value.trim().replace(/\s+/g, '');
+                if (query) {
+                    // Open tracking page in new tab with the number directly after the equals sign
+                    window.open(`https://dbaco.com/track?hawb=${query}`, '_blank');
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        function initSearchHandlers() {
+            function handleSearch(event, inputId) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    trackShipment(inputId);
+                }
+            }
+            
+            const headerSearch = document.getElementById('header-search');
+            const mobileHeaderSearch = document.getElementById('mobile-header-search');
+            
+            if (headerSearch) {
+                headerSearch.addEventListener('keypress', (e) => handleSearch(e, 'header-search'));
+            }
+            if (mobileHeaderSearch) {
+                mobileHeaderSearch.addEventListener('keypress', (e) => handleSearch(e, 'mobile-header-search'));
+            }
+        }
+        
+        // Initialize on DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSearchHandlers);
+        } else {
+            initSearchHandlers();
+        }
+    </script>
+    <script>
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+            document.getElementById('mobile-menu')?.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
