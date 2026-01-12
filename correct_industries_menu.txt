@@ -1,0 +1,57 @@
+<!-- Industries Mega Menu -->
+                    <div class="relative group">
+                        <a href="#industries" class="text-gray-700 hover:text-primary transition-colors text-sm font-medium flex items-center py-2">
+                            Industries
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="mega-menu absolute top-full left-0 mt-4 w-[700px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-8">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-4">Industries We Serve</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="healthcare.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Medical Supplies
+                                        </a></li>
+                                        <li><a href="industrial-machinery.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Industrial Machinery
+                                        </a></li>
+                                        <li><a href="military-government.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Military/Government
+                                        </a></li>
+                                        <li><a href="trade-show.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Trade Show
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-4">&nbsp;</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="turnarounds.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Turnarounds
+                                        </a></li>
+                                        <li><a href="food-processing.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Food Processing
+                                        </a></li>
+                                        <li><a href="automotive.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Automotive
+                                        </a></li>
+                                        <li><a href="disaster-response.html" class="text-sm text-gray-700 hover:text-primary transition-colors flex items-center group/item">
+                                            <span class="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
+                                            Disaster Response
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
