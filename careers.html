@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logodba.png">
+    <link rel="shortcut icon" type="image/png" href="images/logodba.png">
+    <link rel="apple-touch-icon" href="images/logodba.png">
     <title>Careers | Distribution By Air</title>
+    <meta name="description" content="Join the Distribution By Air team. Build your career with a company that values integrity, determination, and personal service. Competitive benefits and growth opportunities.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dbaco.com/careers.html">
+    <meta property="og:title" content="Careers | Distribution By Air">
+    <meta property="og:description" content="Join the Distribution By Air team. Build your career with a company that values integrity, determination, and personal service. Competitive benefits and growth opportunities.">
+    <meta property="og:image" content="https://www.dbaco.com/images/og-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.dbaco.com/careers.html">
+    <meta property="twitter:title" content="Careers | Distribution By Air">
+    <meta property="twitter:description" content="Join the Distribution By Air team. Build your career with a company that values integrity, determination, and personal service. Competitive benefits and growth opportunities.">
+    <meta property="twitter:image" content="https://www.dbaco.com/images/og-preview.jpg">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -696,10 +716,96 @@
             document.getElementById('mobile-menu')?.classList.toggle('hidden');
         });
         
-        document.querySelector('form')?.addEventListener('submit', (e) => {
+        document.querySelector('form')?.addEventListener('submit', async function(e) {
             e.preventDefault();
-            alert('Thank you for your application! We will review it and contact you soon.');
-            e.target.reset();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Format email content
+            let emailContent = `
+                <h2 style="color: #1e7e34; margin-bottom: 20px;">Job Application</h2>
+                
+                <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <h3 style="color: #1e7e34; margin-bottom: 15px;">Contact Information</h3>
+                    <p><strong>Name:</strong> ${data.firstName || ''} ${data.lastName || ''}</p>
+                    <p><strong>Email:</strong> ${data.email || ''}</p>
+                    <p><strong>Phone:</strong> ${data.phone || ''}</p>
+                </div>
+                
+                <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <h3 style="color: #1e7e34; margin-bottom: 15px;">Application Details</h3>
+                    <p><strong>Position of Interest:</strong> ${data.position || ''}</p>
+                    ${data.coverLetter ? `<p><strong>Cover Letter:</strong><br>${data.coverLetter.replace(/\n/g, '<br>')}</p>` : ''}
+                </div>
+                
+                ${data.resume ? `<p><strong>Resume:</strong> ${data.resume.name || 'Attached'}</p>` : ''}
+            `;
+            
+            // Create plain text version for fallback
+            const plainTextContent = `
+JOB APPLICATION
+
+Contact Information:
+Name: ${data.firstName || ''} ${data.lastName || ''}
+Email: ${data.email || ''}
+Phone: ${data.phone || ''}
+
+Application Details:
+Position of Interest: ${data.position || ''}
+${data.coverLetter ? `Cover Letter:\n${data.coverLetter}` : ''}
+${data.resume ? `Resume: ${data.resume.name || 'Attached'}` : ''}
+            `.trim();
+            
+            const mailtoSubject = encodeURIComponent(`Job Application - ${data.position || 'Position'}`);
+            const mailtoBody = encodeURIComponent(plainTextContent);
+            const mailtoLink = `mailto:logistics@dbaco.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+            
+            // EmailJS Configuration (optional - can be enabled later)
+            const EMAILJS_CONFIG = {
+                publicKey: "YOUR_PUBLIC_KEY",
+                serviceId: "YOUR_SERVICE_ID",
+                templateId: "YOUR_TEMPLATE_ID",
+                enabled: false
+            };
+            
+            // Try EmailJS first if enabled, otherwise fallback to mailto
+            if (EMAILJS_CONFIG.enabled && EMAILJS_CONFIG.publicKey !== "YOUR_PUBLIC_KEY") {
+                try {
+                    emailjs.init(EMAILJS_CONFIG.publicKey);
+                    
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.textContent;
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+                    
+                    await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
+                        to_email: "logistics@dbaco.com",
+                        to_name: "DBA HR Team",
+                        from_name: `${data.firstName || ''} ${data.lastName || ''}`.trim() || "Job Applicant",
+                        from_email: data.email || "noreply@dbaco.com",
+                        subject: `Job Application - ${data.position || 'Position'}`,
+                        message: emailContent,
+                        reply_to: data.email || ""
+                    });
+                    
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                    alert('Thank you for your application! We will review it and contact you soon.');
+                    form.reset();
+                } catch (error) {
+                    console.error('EmailJS Error:', error);
+                    // Fallback to mailto
+                    window.location.href = mailtoLink;
+                }
+            } else {
+                // Use mailto: as fallback
+                window.location.href = mailtoLink;
+            }
         });
     </script>
 </body>
