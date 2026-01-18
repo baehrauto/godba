@@ -54,6 +54,97 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
+        
+        /* HubSpot Form Styling - White Text */
+        .hs-form-frame,
+        .hs-form-frame * {
+            color: white !important;
+        }
+        
+        .hs-form-frame label,
+        .hs-form-frame .hs-form-field label,
+        .hs-form-frame .hs-form-field > label,
+        .hs-form-frame .hs-form-field label span,
+        .hs-form-frame .hs-form-field legend,
+        .hs-form-frame .hs-error-msgs label,
+        .hs-form-frame .hs-error-msgs li,
+        .hs-form-frame .submitted-message {
+            color: white !important;
+        }
+        
+        .hs-form-frame input[type="text"],
+        .hs-form-frame input[type="email"],
+        .hs-form-frame input[type="tel"],
+        .hs-form-frame input[type="number"],
+        .hs-form-frame input[type="date"],
+        .hs-form-frame input[type="time"],
+        .hs-form-frame textarea,
+        .hs-form-frame select {
+            color: white !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+        
+        .hs-form-frame input[type="text"]::placeholder,
+        .hs-form-frame input[type="email"]::placeholder,
+        .hs-form-frame input[type="tel"]::placeholder,
+        .hs-form-frame textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        .hs-form-frame input[type="text"]:focus,
+        .hs-form-frame input[type="email"]:focus,
+        .hs-form-frame input[type="tel"]:focus,
+        .hs-form-frame input[type="number"]:focus,
+        .hs-form-frame textarea:focus,
+        .hs-form-frame select:focus {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            border-color: rgba(255, 255, 255, 0.5) !important;
+            outline: none !important;
+        }
+        
+        /* Remove text selection highlighting */
+        .hs-form-frame *::selection {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+        
+        .hs-form-frame *::-moz-selection {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+        
+        .hs-form-frame input::selection,
+        .hs-form-frame textarea::selection {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+        
+        .hs-form-frame input::-moz-selection,
+        .hs-form-frame textarea::-moz-selection {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+        
+        /* Style checkboxes and radio buttons */
+        .hs-form-frame input[type="checkbox"],
+        .hs-form-frame input[type="radio"] {
+            accent-color: white !important;
+        }
+        
+        /* Button styling */
+        .hs-form-frame .hs-button,
+        .hs-form-frame input[type="submit"],
+        .hs-form-frame button[type="submit"] {
+            color: #1e7e34 !important;
+            background-color: white !important;
+        }
+        
+        .hs-form-frame .hs-button:hover,
+        .hs-form-frame input[type="submit"]:hover,
+        .hs-form-frame button[type="submit"]:hover {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -370,7 +461,7 @@
                 </p>
             </div>
             
-            <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-100 shadow-xl">
+            <div class="bg-gradient-to-br from-gray-900 via-gray-800 to-primary-dark rounded-2xl p-8 md:p-12 border-2 border-gray-700 shadow-xl">
                 <script src="https://js.hsforms.net/forms/embed/44398490.js" defer></script>
                 <div class="hs-form-frame" data-region="na1" data-form-id="ed829759-625e-4d3a-bad2-08a7ab54f7ba" data-portal-id="44398490"></div>
             </div>
