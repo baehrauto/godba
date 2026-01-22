@@ -364,6 +364,14 @@
     <section class="py-20 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-100 shadow-xl">
+                <!-- 
+                    Netlify Form Configuration:
+                    - Form name: customer-satisfaction-survey
+                    - Email recipient: logistics@godba.com
+                    - Configure email notifications in Netlify Dashboard:
+                      Site → Forms → customer-satisfaction-survey → Notifications → Add notification
+                      Set recipient to: logistics@godba.com
+                -->
                 <form id="satisfaction-survey" name="customer-satisfaction-survey" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/newsurvey.html?submitted=true" class="space-y-8">
                     <!-- Hidden field for Netlify spam protection -->
                     <input type="hidden" name="form-name" value="customer-satisfaction-survey">
