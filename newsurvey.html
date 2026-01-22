@@ -23,6 +23,9 @@
     <meta property="twitter:description" content="Share your feedback about your experience with Distribution By Air. Help us improve our service by completing our customer satisfaction survey.">
     <meta property="twitter:image" content="https://www.dbaco.com/images/og-preview.jpg">
     
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -719,6 +722,23 @@
             });
         });
 
+        // EmailJS Configuration
+        // To set up EmailJS:
+        // 1. Go to https://www.emailjs.com/ and create a free account
+        // 2. Create an Email Service (Gmail, Outlook, etc.)
+        // 3. Create an Email Template with these variables:
+        //    - to_email, to_name, from_name, from_email, subject, message, reply_to
+        // 4. Get your Public Key from Account > General
+        // 5. Replace the values below with your actual credentials
+        // 6. Set enabled: true once configured
+        
+        const EMAILJS_CONFIG = {
+            publicKey: "YOUR_PUBLIC_KEY", // Replace with your EmailJS Public Key
+            serviceId: "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
+            templateId: "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+            enabled: false // Set to true once you've configured EmailJS
+        };
+
         // Form submission
         document.getElementById('satisfaction-survey')?.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -732,21 +752,108 @@
                 experience: document.getElementById('experience').value
             };
             
-            // Here you would typically send this data to a server
-            // For now, we'll just show a success message
-            console.log('Survey submitted:', formData);
+            // Format email content
+            const emailContent = `
+                <h2 style="color: #1e7e34; border-bottom: 2px solid #1e7e34; padding-bottom: 10px; margin-bottom: 20px;">
+                    Customer Satisfaction Survey Submission
+                </h2>
+                
+                <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+                    <p><strong>Service Rating:</strong> ${formData.rating} / 10</p>
+                    <p><strong>Helped By:</strong> ${formData.helper}</p>
+                    <p><strong>Name/Company:</strong> ${formData.name}</p>
+                    <p><strong>Email:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>
+                    
+                    <h3 style="color: #1e7e34; margin-top: 20px; margin-bottom: 10px;">Experience Description:</h3>
+                    <p style="background-color: #f5f5f5; padding: 15px; border-left: 4px solid #1e7e34; margin: 10px 0;">
+                        ${formData.experience.replace(/\n/g, '<br>')}
+                    </p>
+                </div>
+            `;
             
-            // Show success message
-            document.getElementById('success-message').classList.remove('hidden');
+            // Create plain text version for fallback
+            const plainTextContent = `
+Customer Satisfaction Survey Submission
+
+Service Rating: ${formData.rating} / 10
+Helped By: ${formData.helper}
+Name/Company: ${formData.name}
+Email: ${formData.email}
+
+Experience Description:
+${formData.experience}
+            `.trim();
             
-            // Scroll to success message
-            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            const mailtoSubject = encodeURIComponent(`Customer Satisfaction Survey - Rating: ${formData.rating}/10`);
+            const mailtoBody = encodeURIComponent(plainTextContent);
+            const mailtoLink = `mailto:logistics@dbaco.com?subject=${mailtoSubject}&body=${mailtoBody}`;
             
-            // Reset form after 3 seconds (optional)
-            // setTimeout(() => {
-            //     this.reset();
-            //     document.getElementById('success-message').classList.add('hidden');
-            // }, 5000);
+            // Get submit button for loading state
+            const submitButton = document.querySelector('#satisfaction-survey button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Try EmailJS first if enabled, otherwise fallback to mailto
+            if (EMAILJS_CONFIG.enabled && EMAILJS_CONFIG.publicKey !== "YOUR_PUBLIC_KEY") {
+                // Initialize EmailJS
+                emailjs.init(EMAILJS_CONFIG.publicKey);
+                
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+                
+                // Send email via EmailJS
+                emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
+                    to_email: "logistics@dbaco.com",
+                    to_name: "DBA Customer Service Team",
+                    from_name: formData.name || "Survey Respondent",
+                    from_email: formData.email || "noreply@dbaco.com",
+                    subject: `Customer Satisfaction Survey - Rating: ${formData.rating}/10`,
+                    message: emailContent,
+                    reply_to: formData.email || ""
+                })
+                .then(function(response) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                    
+                    // Show success message
+                    document.getElementById('success-message').classList.remove('hidden');
+                    document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                    // Reset form
+                    document.getElementById('satisfaction-survey').reset();
+                    document.querySelectorAll('.rating-btn').forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white', 'border-primary');
+                        btn.classList.add('border-gray-300');
+                    });
+                }, function(error) {
+                    console.error('EmailJS Error:', error);
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                    
+                    // Fallback to mailto if EmailJS fails
+                    window.location.href = mailtoLink;
+                    setTimeout(function() {
+                        alert('Thank you for your feedback! Your email client should have opened as a backup. If not, please contact us at logistics@dbaco.com');
+                    }, 500);
+                });
+            } else {
+                // Use mailto: as fallback
+                window.location.href = mailtoLink;
+                setTimeout(function() {
+                    alert('Thank you for your feedback! Your email client should have opened with all the details. If it didn\'t open, please copy the information and email us at logistics@dbaco.com');
+                    
+                    // Show success message
+                    document.getElementById('success-message').classList.remove('hidden');
+                    document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                    // Reset form
+                    document.getElementById('satisfaction-survey').reset();
+                    document.querySelectorAll('.rating-btn').forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white', 'border-primary');
+                        btn.classList.add('border-gray-300');
+                    });
+                }, 500);
+            }
         });
 
         // Track shipment search functionality
