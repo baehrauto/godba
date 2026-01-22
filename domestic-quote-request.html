@@ -355,7 +355,18 @@
     <!-- Form -->
     <section class="py-20 bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <form action="https://www.godba.com/domestic-quote-request/" method="POST" class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100" id="domestic-quote-form">
+            <!-- 
+                Netlify Form Configuration:
+                - Form name: domestic-quote-request
+                - Email recipient: eissales@dbaco.com (configure in Netlify Dashboard)
+            -->
+            <form name="domestic-quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/domestic-quote-request.html?submitted=true" class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100" id="domestic-quote-form">
+                <!-- Hidden fields for Netlify -->
+                <input type="hidden" name="form-name" value="domestic-quote-request">
+                <p style="display: none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                
                 <!-- Contact Information -->
                 <h3 class="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200">Contact Information</h3>
                 <div class="mb-8">
@@ -1080,183 +1091,26 @@
                 });
             });
             
-            // Form submission with email
+            // Form submission handler for Netlify Forms
             const form = document.getElementById('domestic-quote-form');
             if (form) {
                 form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Collect all form data
-                    const formData = new FormData(form);
-                    const data = {};
-                    for (let [key, value] of formData.entries()) {
-                        if (data[key]) {
-                            // Handle arrays (checkboxes, multiple items)
-                            if (Array.isArray(data[key])) {
-                                data[key].push(value);
-                            } else {
-                                data[key] = [data[key], value];
-                            }
-                        } else {
-                            data[key] = value;
-                        }
-                    }
-                    
-                    // Format email content
-                    let emailContent = `
-                        <h2 style="color: #1e7e34; font-size: 24px; margin-bottom: 20px;">Domestic Quote Request</h2>
-                        
-                        <h3 style="color: #155724; font-size: 18px; margin-top: 20px; margin-bottom: 10px; border-bottom: 2px solid #1e7e34; padding-bottom: 5px;">Contact Information</h3>
-                        <p><strong>Name:</strong> ${data.name || 'N/A'}</p>
-                        <p><strong>Company Name:</strong> ${data.company || 'N/A'}</p>
-                        <p><strong>Email:</strong> ${data.email || 'N/A'}</p>
-                        <p><strong>Phone:</strong> ${data.phone || 'N/A'}</p>
-                        
-                        <h3 style="color: #155724; font-size: 18px; margin-top: 20px; margin-bottom: 10px; border-bottom: 2px solid #1e7e34; padding-bottom: 5px;">Pickup Information</h3>
-                        <p><strong>Location:</strong> ${data.pickupLocation || 'N/A'}</p>
-                        <p><strong>Address 1:</strong> ${data.pickupAddress1 || 'N/A'}</p>
-                        <p><strong>Address 2:</strong> ${data.pickupAddress2 || 'N/A'}</p>
-                        <p><strong>City:</strong> ${data.pickupCity || 'N/A'}</p>
-                        <p><strong>State:</strong> ${data.pickupState || 'N/A'}</p>
-                        <p><strong>Zip Code:</strong> ${data.pickupZip || 'N/A'}</p>
-                        <p><strong>Location Type:</strong> ${data.pickupLocationType || 'N/A'}</p>
-                        <p><strong>Required Services:</strong> ${Array.isArray(data['requiredServices[]']) ? data['requiredServices[]'].join(', ') : (data['requiredServices[]'] || 'None')}</p>
-                        
-                        <h3 style="color: #155724; font-size: 18px; margin-top: 20px; margin-bottom: 10px; border-bottom: 2px solid #1e7e34; padding-bottom: 5px;">Delivery Information</h3>
-                        <p><strong>Location:</strong> ${data.deliveryLocation || 'N/A'}</p>
-                        <p><strong>Address 1:</strong> ${data.deliveryAddress1 || 'N/A'}</p>
-                        <p><strong>Address 2:</strong> ${data.deliveryAddress2 || 'N/A'}</p>
-                        <p><strong>City:</strong> ${data.deliveryCity || 'N/A'}</p>
-                        <p><strong>State:</strong> ${data.deliveryState || 'N/A'}</p>
-                        <p><strong>Zip Code:</strong> ${data.deliveryZip || 'N/A'}</p>
-                        <p><strong>Location Type:</strong> ${data.deliveryLocationType || 'N/A'}</p>
-                        <p><strong>Required Services:</strong> ${Array.isArray(data['deliveryRequiredServices[]']) ? data['deliveryRequiredServices[]'].join(', ') : (data['deliveryRequiredServices[]'] || 'None')}</p>
-                        
-                        <h3 style="color: #155724; font-size: 18px; margin-top: 20px; margin-bottom: 10px; border-bottom: 2px solid #1e7e34; padding-bottom: 5px;">Shipping Information</h3>
-                        <p><strong>Pickup Date:</strong> ${data.pickupDate || 'N/A'}</p>
-                        <p><strong>Ready Time:</strong> ${data.pickupReadyHour || ''}:${data.pickupReadyMinute || ''} ${data.pickupReadyAMPM || ''}</p>
-                        <p><strong>Close Time:</strong> ${data.pickupCloseHour || ''}:${data.pickupCloseMinute || ''} ${data.pickupCloseAMPM || ''}</p>
-                        <p><strong>Delivery Date:</strong> ${data.deliveryDate || 'N/A'}</p>
-                        <p><strong>Open Time:</strong> ${data.deliveryOpenHour || ''}:${data.deliveryOpenMinute || ''} ${data.deliveryOpenAMPM || ''}</p>
-                        <p><strong>Close Time:</strong> ${data.deliveryCloseHour || ''}:${data.deliveryCloseMinute || ''} ${data.deliveryCloseAMPM || ''}</p>
-                        <p><strong>Service Level:</strong> ${data.serviceLevel || 'N/A'}</p>
-                        <p><strong>Insurance Required:</strong> ${data.insuranceRequired || 'N/A'}</p>
-                        <p><strong>Insurance Value:</strong> $${data.insuranceValue || '0.00'}</p>
-                        <p><strong>Hazardous:</strong> ${data.hazardous || 'No'}</p>
-                        ${data.hazardous === 'Yes' ? `<p><strong>Hazardous Description:</strong> ${data.hazardousDescription || 'N/A'}</p>` : ''}
-                        
-                        <h3 style="color: #155724; font-size: 18px; margin-top: 20px; margin-bottom: 10px; border-bottom: 2px solid #1e7e34; padding-bottom: 5px;">Item Information</h3>
-                    `;
-                    
-                    // Add items
-                    const pieceCounts = Array.isArray(data['pieceCount[]']) ? data['pieceCount[]'] : (data['pieceCount[]'] ? [data['pieceCount[]']] : []);
-                    const weights = Array.isArray(data['weightPerPiece[]']) ? data['weightPerPiece[]'] : (data['weightPerPiece[]'] ? [data['weightPerPiece[]']] : []);
-                    const lengths = Array.isArray(data['length[]']) ? data['length[]'] : (data['length[]'] ? [data['length[]']] : []);
-                    const widths = Array.isArray(data['width[]']) ? data['width[]'] : (data['width[]'] ? [data['width[]']] : []);
-                    const heights = Array.isArray(data['height[]']) ? data['height[]'] : (data['height[]'] ? [data['height[]']] : []);
-                    
-                    const itemCount = Math.max(pieceCounts.length, weights.length, lengths.length, widths.length, heights.length);
-                    
-                    for (let i = 0; i < itemCount; i++) {
-                        emailContent += `
-                            <div style="margin-bottom: 15px; padding: 10px; background-color: #f5f5f5; border-left: 3px solid #1e7e34;">
-                                <p><strong>Item ${i + 1}:</strong></p>
-                                <p style="margin-left: 20px;">Piece Count: ${pieceCounts[i] || 'N/A'}</p>
-                                <p style="margin-left: 20px;">Weight Per Piece: ${weights[i] || 'N/A'} lbs</p>
-                                <p style="margin-left: 20px;">Dimensions: ${lengths[i] || '0'}" x ${widths[i] || '0'}" x ${heights[i] || '0'}"</p>
-                            </div>
-                        `;
-                    }
-                    
-                    if (data.additionalNotes) {
-                        emailContent += `<p><strong>Additional Notes:</strong> ${data.additionalNotes}</p>`;
-                    }
-                    
-                    // EmailJS Configuration
-                    // To set up EmailJS:
-                    // 1. Go to https://www.emailjs.com/ and create a free account
-                    // 2. Create an Email Service (Gmail, Outlook, etc.)
-                    // 3. Create an Email Template with these variables:
-                    //    - {{to_email}} - recipient email
-                    //    - {{to_name}} - recipient name
-                    //    - {{from_name}} - sender name
-                    //    - {{from_email}} - sender email
-                    //    - {{subject}} - email subject
-                    //    - {{message}} - email body (HTML)
-                    //    - {{reply_to}} - reply-to email
-                    // 4. Get your Public Key from Account > API Keys
-                    // 5. Get your Service ID from Email Services
-                    // 6. Get your Template ID from Email Templates
-                    // 7. Replace the values below with your actual credentials
-                    
-                    const EMAILJS_CONFIG = {
-                        publicKey: "YOUR_PUBLIC_KEY", // Replace with your EmailJS Public Key
-                        serviceId: "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-                        templateId: "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
-                        enabled: false // Set to true once you've configured EmailJS
-                    };
-                    
-                    // Create plain text version for fallback
-                    const plainTextContent = emailContent
-                        .replace(/<h2[^>]*>([^<]*)<\/h2>/g, '\n\n$1\n' + '='.repeat(50) + '\n')
-                        .replace(/<h3[^>]*>([^<]*)<\/h3>/g, '\n\n$1\n' + '-'.repeat(40) + '\n')
-                        .replace(/<p><strong>([^<]*)<\/strong>: ([^<]*)<\/p>/g, '$1: $2')
-                        .replace(/<p style="[^"]*"><strong>([^<]*)<\/strong>: ([^<]*)<\/p>/g, '  $1: $2')
-                        .replace(/<div[^>]*>/g, '\n')
-                        .replace(/<\/div>/g, '')
-                        .replace(/<[^>]*>/g, '')
-                        .replace(/\n{3,}/g, '\n\n')
-                        .trim();
-                    
-                    const mailtoSubject = encodeURIComponent(`Domestic Quote Request from ${data.company || data.name || 'Unknown Company'}`);
-                    const mailtoBody = encodeURIComponent(plainTextContent);
-                    const mailtoLink = `mailto:eissales@dbaco.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-                    
-                    // Try EmailJS first if enabled, otherwise fallback to mailto
-                    if (EMAILJS_CONFIG.enabled && EMAILJS_CONFIG.publicKey !== "YOUR_PUBLIC_KEY") {
-                        // Initialize EmailJS
-                        emailjs.init(EMAILJS_CONFIG.publicKey);
-                        
-                        // Show loading state
-                        const submitButton = form.querySelector('button[type="submit"]');
+                    // Show loading state
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    if (submitButton) {
                         const originalButtonText = submitButton.textContent;
                         submitButton.disabled = true;
-                        submitButton.textContent = 'Sending...';
-                        
-                        // Send email via EmailJS
-                        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
-                            to_email: "eissales@dbaco.com",
-                            to_name: "DBA Sales Team",
-                            from_name: data.name || "Quote Request",
-                            from_email: data.email || "noreply@dbaco.com",
-                            subject: `Domestic Quote Request from ${data.company || data.name || 'Unknown Company'}`,
-                            message: emailContent,
-                            reply_to: data.email || ""
-                        })
-                        .then(function(response) {
-                            submitButton.disabled = false;
-                            submitButton.textContent = originalButtonText;
-                            alert('Thank you for your request! We will contact you shortly.');
-                            form.reset();
-                        }, function(error) {
-                            console.error('EmailJS Error:', error);
-                            submitButton.disabled = false;
-                            submitButton.textContent = originalButtonText;
-                            // Fallback to mailto if EmailJS fails
-                            window.location.href = mailtoLink;
-                            setTimeout(function() {
-                                alert('There was an issue sending your email. Your email client should have opened as a backup. If not, please contact us at eissales@dbaco.com');
-                            }, 500);
-                        });
-                    } else {
-                        // Use mailto: as fallback
-                        window.location.href = mailtoLink;
-                        setTimeout(function() {
-                            alert('Thank you for your request! Your email client should have opened with all the details. If it didn\'t open, please copy the information and email us at eissales@dbaco.com');
-                            form.reset();
-                        }, 500);
+                        submitButton.textContent = 'Submitting...';
                     }
+                    
+                    // Let Netlify handle the form submission
+                    // The form will submit normally and redirect to success page
                 });
+                
+                // Handle Netlify form success (check if we're on the success page)
+                if (window.location.search.includes('submitted=true')) {
+                    alert('Thank you for your request! We will contact you shortly.');
+                }
             }
         });
     </script>
