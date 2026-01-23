@@ -347,23 +347,29 @@
     </nav>
     
     <!-- Hero -->
-    <section class="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+    <section class="relative bg-gradient-to-br from-primary/5 via-white to-primary/5 overflow-hidden pt-24 pb-20">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxZTdlMzQiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0YzAtMS4xLS45LTItMi0ycy0yIC45LTIgMiAuOSAyIDIgMiAyLS45IDItMnpNMjQgMzRjMC0xLjEtLjktMi0yLTJzLTIgLjktMiAyIC45IDIgMiAyIDItLjkgMi0yek0xMiAzNGMwLTEuMS0uOS0yLTItMnMtMiAuOS0yIDIgLjkgMiAyIDIgMi0uOSAyLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                     Customer Satisfaction Survey
                 </h1>
-                <p class="text-xl text-gray-600 mb-8">
-                    We value your feedback. Please take a moment to share your experience with DBA.
+                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Your feedback helps us improve. Please take a moment to share your experience with DBA.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Survey Form Section -->
-    <section class="py-20 bg-white">
+    <section class="py-12 sm:py-16 bg-gradient-to-b from-white to-gray-50">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-100 shadow-xl">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg border border-gray-100">
                 <!-- 
                     Netlify Form Configuration:
                     - Form name: customer-satisfaction-survey
@@ -372,7 +378,7 @@
                       Site → Forms → customer-satisfaction-survey → Notifications → Add notification
                       Set recipient to: logistics@dbaco.com
                 -->
-                <form id="satisfaction-survey" name="customer-satisfaction-survey" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/newsurvey.html?submitted=true" class="space-y-8">
+                <form id="satisfaction-survey" name="customer-satisfaction-survey" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/newsurvey.html?submitted=true" class="space-y-10">
                     <!-- Hidden field for Netlify spam protection -->
                     <input type="hidden" name="form-name" value="customer-satisfaction-survey">
                     <p style="display: none;">
@@ -380,150 +386,171 @@
                     </p>
                     
                     <!-- Question 1: Transit Time -->
-                    <div class="border-b border-gray-200 pb-6">
-                        <label for="transit-time" class="block text-base md:text-lg font-semibold text-gray-900 mb-3">
+                    <div class="space-y-4">
+                        <label for="transit-time" class="block text-lg font-semibold text-gray-900 leading-snug">
                             Did the transit time of your shipment meet or exceed your original expectations?
                         </label>
-                        <div class="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-3 md:space-y-0">
-                            <input 
-                                type="number" 
-                                id="transit-time" 
-                                name="transit-time" 
-                                min="1" 
-                                max="5" 
-                                required
-                                class="w-full md:w-24 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg font-semibold text-center"
-                                placeholder="5"
-                            >
-                            <div class="flex-1 w-full">
-                                <div class="flex justify-between text-xs md:text-sm text-gray-500 mb-1">
-                                    <span>1</span>
-                                    <span>5</span>
-                                </div>
-                                <div class="flex space-x-1 justify-center md:justify-start">
-                                    <button type="button" class="rating-btn transit-time-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="1" data-field="transit-time">1</button>
-                                    <button type="button" class="rating-btn transit-time-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="2" data-field="transit-time">2</button>
-                                    <button type="button" class="rating-btn transit-time-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="3" data-field="transit-time">3</button>
-                                    <button type="button" class="rating-btn transit-time-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="4" data-field="transit-time">4</button>
-                                    <button type="button" class="rating-btn transit-time-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="5" data-field="transit-time">5</button>
-                                </div>
+                        <input 
+                            type="hidden" 
+                            id="transit-time" 
+                            name="transit-time" 
+                            required
+                        >
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                            <div class="flex items-center gap-2 sm:gap-3 flex-1 w-full sm:w-auto justify-center sm:justify-start">
+                                <button type="button" class="rating-btn transit-time-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="1" data-field="transit-time">
+                                    <span class="text-base sm:text-lg">1</span>
+                                </button>
+                                <button type="button" class="rating-btn transit-time-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="2" data-field="transit-time">
+                                    <span class="text-base sm:text-lg">2</span>
+                                </button>
+                                <button type="button" class="rating-btn transit-time-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="3" data-field="transit-time">
+                                    <span class="text-base sm:text-lg">3</span>
+                                </button>
+                                <button type="button" class="rating-btn transit-time-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="4" data-field="transit-time">
+                                    <span class="text-base sm:text-lg">4</span>
+                                </button>
+                                <button type="button" class="rating-btn transit-time-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="5" data-field="transit-time">
+                                    <span class="text-base sm:text-lg">5</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-500 w-full sm:w-auto justify-center sm:justify-start">
+                                <span>Poor</span>
+                                <span class="text-gray-300">•</span>
+                                <span>Excellent</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 2: Customer Service -->
-                    <div class="border-b border-gray-200 pb-6">
-                        <label for="customer-service" class="block text-base md:text-lg font-semibold text-gray-900 mb-3">
+                    <div class="space-y-4 pt-6 border-t border-gray-100">
+                        <label for="customer-service" class="block text-lg font-semibold text-gray-900 leading-snug">
                             Did DBA's Customer Service Team provide knowledgeable, courteous service?
                         </label>
-                        <div class="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-3 md:space-y-0">
-                            <input 
-                                type="number" 
-                                id="customer-service" 
-                                name="customer-service" 
-                                min="1" 
-                                max="5" 
-                                required
-                                class="w-full md:w-24 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg font-semibold text-center"
-                                placeholder="5"
-                            >
-                            <div class="flex-1 w-full">
-                                <div class="flex justify-between text-xs md:text-sm text-gray-500 mb-1">
-                                    <span>1</span>
-                                    <span>5</span>
-                                </div>
-                                <div class="flex space-x-1 justify-center md:justify-start">
-                                    <button type="button" class="rating-btn customer-service-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="1" data-field="customer-service">1</button>
-                                    <button type="button" class="rating-btn customer-service-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="2" data-field="customer-service">2</button>
-                                    <button type="button" class="rating-btn customer-service-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="3" data-field="customer-service">3</button>
-                                    <button type="button" class="rating-btn customer-service-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="4" data-field="customer-service">4</button>
-                                    <button type="button" class="rating-btn customer-service-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="5" data-field="customer-service">5</button>
-                                </div>
+                        <input 
+                            type="hidden" 
+                            id="customer-service" 
+                            name="customer-service" 
+                            required
+                        >
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                            <div class="flex items-center gap-2 sm:gap-3 flex-1 w-full sm:w-auto justify-center sm:justify-start">
+                                <button type="button" class="rating-btn customer-service-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="1" data-field="customer-service">
+                                    <span class="text-base sm:text-lg">1</span>
+                                </button>
+                                <button type="button" class="rating-btn customer-service-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="2" data-field="customer-service">
+                                    <span class="text-base sm:text-lg">2</span>
+                                </button>
+                                <button type="button" class="rating-btn customer-service-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="3" data-field="customer-service">
+                                    <span class="text-base sm:text-lg">3</span>
+                                </button>
+                                <button type="button" class="rating-btn customer-service-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="4" data-field="customer-service">
+                                    <span class="text-base sm:text-lg">4</span>
+                                </button>
+                                <button type="button" class="rating-btn customer-service-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="5" data-field="customer-service">
+                                    <span class="text-base sm:text-lg">5</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-500 w-full sm:w-auto justify-center sm:justify-start">
+                                <span>Poor</span>
+                                <span class="text-gray-300">•</span>
+                                <span>Excellent</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 3: Likelihood to order again -->
-                    <div class="border-b border-gray-200 pb-6">
-                        <label for="likelihood-order" class="block text-base md:text-lg font-semibold text-gray-900 mb-3">
+                    <div class="space-y-4 pt-6 border-t border-gray-100">
+                        <label for="likelihood-order" class="block text-lg font-semibold text-gray-900 leading-snug">
                             Based on your experience, how likely are you to place another order with DBA?
                         </label>
-                        <div class="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-3 md:space-y-0">
-                            <input 
-                                type="number" 
-                                id="likelihood-order" 
-                                name="likelihood-order" 
-                                min="1" 
-                                max="5" 
-                                required
-                                class="w-full md:w-24 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg font-semibold text-center"
-                                placeholder="5"
-                            >
-                            <div class="flex-1 w-full">
-                                <div class="flex justify-between text-xs md:text-sm text-gray-500 mb-1">
-                                    <span>1</span>
-                                    <span>5</span>
-                                </div>
-                                <div class="flex space-x-1 justify-center md:justify-start">
-                                    <button type="button" class="rating-btn likelihood-order-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="1" data-field="likelihood-order">1</button>
-                                    <button type="button" class="rating-btn likelihood-order-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="2" data-field="likelihood-order">2</button>
-                                    <button type="button" class="rating-btn likelihood-order-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="3" data-field="likelihood-order">3</button>
-                                    <button type="button" class="rating-btn likelihood-order-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="4" data-field="likelihood-order">4</button>
-                                    <button type="button" class="rating-btn likelihood-order-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="5" data-field="likelihood-order">5</button>
-                                </div>
+                        <input 
+                            type="hidden" 
+                            id="likelihood-order" 
+                            name="likelihood-order" 
+                            required
+                        >
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                            <div class="flex items-center gap-2 sm:gap-3 flex-1 w-full sm:w-auto justify-center sm:justify-start">
+                                <button type="button" class="rating-btn likelihood-order-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="1" data-field="likelihood-order">
+                                    <span class="text-base sm:text-lg">1</span>
+                                </button>
+                                <button type="button" class="rating-btn likelihood-order-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="2" data-field="likelihood-order">
+                                    <span class="text-base sm:text-lg">2</span>
+                                </button>
+                                <button type="button" class="rating-btn likelihood-order-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="3" data-field="likelihood-order">
+                                    <span class="text-base sm:text-lg">3</span>
+                                </button>
+                                <button type="button" class="rating-btn likelihood-order-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="4" data-field="likelihood-order">
+                                    <span class="text-base sm:text-lg">4</span>
+                                </button>
+                                <button type="button" class="rating-btn likelihood-order-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="5" data-field="likelihood-order">
+                                    <span class="text-base sm:text-lg">5</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-500 w-full sm:w-auto justify-center sm:justify-start">
+                                <span>Unlikely</span>
+                                <span class="text-gray-300">•</span>
+                                <span>Very Likely</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 4: Recommendation -->
-                    <div class="border-b border-gray-200 pb-6">
-                        <label for="recommendation" class="block text-base md:text-lg font-semibold text-gray-900 mb-3">
+                    <div class="space-y-4 pt-6 border-t border-gray-100">
+                        <label for="recommendation" class="block text-lg font-semibold text-gray-900 leading-snug">
                             Based on your experience(s), would you recommend DBA to anyone else?
                         </label>
-                        <div class="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-3 md:space-y-0">
-                            <input 
-                                type="number" 
-                                id="recommendation" 
-                                name="recommendation" 
-                                min="1" 
-                                max="5" 
-                                required
-                                class="w-full md:w-24 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg font-semibold text-center"
-                                placeholder="5"
-                            >
-                            <div class="flex-1 w-full">
-                                <div class="flex justify-between text-xs md:text-sm text-gray-500 mb-1">
-                                    <span>1</span>
-                                    <span>5</span>
-                                </div>
-                                <div class="flex space-x-1 justify-center md:justify-start">
-                                    <button type="button" class="rating-btn recommendation-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="1" data-field="recommendation">1</button>
-                                    <button type="button" class="rating-btn recommendation-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="2" data-field="recommendation">2</button>
-                                    <button type="button" class="rating-btn recommendation-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="3" data-field="recommendation">3</button>
-                                    <button type="button" class="rating-btn recommendation-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="4" data-field="recommendation">4</button>
-                                    <button type="button" class="rating-btn recommendation-btn w-10 h-10 md:w-10 md:h-10 rounded border-2 border-gray-300 hover:border-primary hover:bg-primary/10 active:bg-primary active:text-white transition-all text-sm md:text-base" data-rating="5" data-field="recommendation">5</button>
-                                </div>
+                        <input 
+                            type="hidden" 
+                            id="recommendation" 
+                            name="recommendation" 
+                            required
+                        >
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                            <div class="flex items-center gap-2 sm:gap-3 flex-1 w-full sm:w-auto justify-center sm:justify-start">
+                                <button type="button" class="rating-btn recommendation-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="1" data-field="recommendation">
+                                    <span class="text-base sm:text-lg">1</span>
+                                </button>
+                                <button type="button" class="rating-btn recommendation-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="2" data-field="recommendation">
+                                    <span class="text-base sm:text-lg">2</span>
+                                </button>
+                                <button type="button" class="rating-btn recommendation-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="3" data-field="recommendation">
+                                    <span class="text-base sm:text-lg">3</span>
+                                </button>
+                                <button type="button" class="rating-btn recommendation-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="4" data-field="recommendation">
+                                    <span class="text-base sm:text-lg">4</span>
+                                </button>
+                                <button type="button" class="rating-btn recommendation-btn w-12 h-12 sm:w-14 sm:h-14 rounded-xl border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:shadow-md transition-all duration-200 font-semibold text-gray-700 hover:text-primary group" data-rating="5" data-field="recommendation">
+                                    <span class="text-base sm:text-lg">5</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-500 w-full sm:w-auto justify-center sm:justify-start">
+                                <span>No</span>
+                                <span class="text-gray-300">•</span>
+                                <span>Definitely</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 5: Comments -->
-                    <div class="border-b border-gray-200 pb-6">
-                        <label for="comments" class="block text-base md:text-lg font-semibold text-gray-900 mb-3">
-                            Please feel free to comment on your experience with DBA (please include any airway bill numbers if possible).
+                    <div class="space-y-3 pt-6 border-t border-gray-100">
+                        <label for="comments" class="block text-lg font-semibold text-gray-900 leading-snug">
+                            Please feel free to comment on your experience with DBA
+                            <span class="text-sm font-normal text-gray-500 block mt-1">(please include any airway bill numbers if possible)</span>
                         </label>
                         <textarea 
                             id="comments" 
                             name="comments" 
                             rows="5"
-                            class="w-full px-4 py-3 text-sm md:text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                            class="w-full px-4 py-3 text-base border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none bg-gray-50 focus:bg-white"
                             placeholder="Share your experience with us..."
                         ></textarea>
                     </div>
 
                     <!-- Question 6: Email address -->
-                    <div class="pb-6">
-                        <label for="email" class="block text-base md:text-lg font-semibold text-gray-900 mb-3">
+                    <div class="space-y-3 pt-6 border-t border-gray-100">
+                        <label for="email" class="block text-lg font-semibold text-gray-900 leading-snug">
                             Please enter your email address
                         </label>
                         <input 
@@ -531,16 +558,16 @@
                             id="email" 
                             name="email" 
                             required
-                            class="w-full px-4 py-3 text-sm md:text-base border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                            class="w-full px-4 py-3 text-base border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all bg-gray-50 focus:bg-white"
                             placeholder="your.email@example.com"
                         >
                     </div>
 
                     <!-- Submit Button -->
-                    <div class="pt-6">
+                    <div class="pt-8">
                         <button 
                             type="submit" 
-                            class="w-full bg-gradient-to-r from-primary to-primary-light text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all transform hover:scale-105"
+                            class="w-full bg-gradient-to-r from-primary to-primary-light text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-primary/25 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
                         >
                             Submit Survey
                         </button>
@@ -548,12 +575,19 @@
                 </form>
 
                 <!-- Success Message (hidden by default) -->
-                <div id="success-message" class="hidden mt-6 p-6 bg-green-50 border-2 border-green-200 rounded-lg">
-                    <div class="flex items-center">
-                        <svg class="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <p class="text-green-800 font-semibold">Thank you for your feedback! Your survey has been submitted successfully.</p>
+                <div id="success-message" class="hidden mt-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl shadow-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-green-900 mb-1">Thank you for your feedback!</h3>
+                            <p class="text-green-800">Your survey has been submitted successfully. We appreciate you taking the time to share your experience with us.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -797,12 +831,12 @@
                     // Update button styles for this specific field group
                     const fieldButtons = document.querySelectorAll(`.rating-btn[data-field="${fieldName}"]`);
                     fieldButtons.forEach(b => {
-                        b.classList.remove('bg-primary', 'text-white', 'border-primary');
-                        b.classList.add('border-gray-300');
+                        b.classList.remove('bg-primary', 'text-white', 'border-primary', 'shadow-md', 'shadow-primary/20');
+                        b.classList.add('border-gray-200', 'text-gray-700');
                     });
                     
-                    this.classList.add('bg-primary', 'text-white', 'border-primary');
-                    this.classList.remove('border-gray-300');
+                    this.classList.add('bg-primary', 'text-white', 'border-primary', 'shadow-md', 'shadow-primary/20');
+                    this.classList.remove('border-gray-200', 'text-gray-700', 'hover:border-primary', 'hover:bg-primary/5', 'hover:text-primary');
                 }
             });
         });
@@ -827,13 +861,15 @@
             
             // Reset all rating buttons
             document.querySelectorAll('.rating-btn').forEach(btn => {
-                btn.classList.remove('bg-primary', 'text-white', 'border-primary');
-                btn.classList.add('border-gray-300');
+                btn.classList.remove('bg-primary', 'text-white', 'border-primary', 'shadow-md', 'shadow-primary/20');
+                btn.classList.add('border-gray-200', 'text-gray-700');
             });
             
-            // Reset all rating input fields
-            document.querySelectorAll('input[type="number"][min="1"][max="5"]').forEach(input => {
-                input.value = '';
+            // Reset all hidden input fields
+            document.querySelectorAll('input[type="hidden"]').forEach(input => {
+                if (input.id && ['transit-time', 'customer-service', 'likelihood-order', 'recommendation'].includes(input.id)) {
+                    input.value = '';
+                }
             });
         }
 
