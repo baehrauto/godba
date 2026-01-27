@@ -169,96 +169,6 @@
             transform: translateY(-12px) scale(1.02);
         }
         
-        /* HubSpot Form Styling - White Text */
-        .hs-form-frame,
-        .hs-form-frame * {
-            color: white !important;
-        }
-        
-        .hs-form-frame label,
-        .hs-form-frame .hs-form-field label,
-        .hs-form-frame .hs-form-field > label,
-        .hs-form-frame .hs-form-field label span,
-        .hs-form-frame .hs-form-field legend,
-        .hs-form-frame .hs-error-msgs label,
-        .hs-form-frame .hs-error-msgs li,
-        .hs-form-frame .submitted-message {
-            color: white !important;
-        }
-        
-        .hs-form-frame input[type="text"],
-        .hs-form-frame input[type="email"],
-        .hs-form-frame input[type="tel"],
-        .hs-form-frame input[type="number"],
-        .hs-form-frame input[type="date"],
-        .hs-form-frame input[type="time"],
-        .hs-form-frame textarea,
-        .hs-form-frame select {
-            color: white !important;
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            border-color: rgba(255, 255, 255, 0.3) !important;
-        }
-        
-        .hs-form-frame input[type="text"]::placeholder,
-        .hs-form-frame input[type="email"]::placeholder,
-        .hs-form-frame input[type="tel"]::placeholder,
-        .hs-form-frame textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7) !important;
-        }
-        
-        .hs-form-frame input[type="text"]:focus,
-        .hs-form-frame input[type="email"]:focus,
-        .hs-form-frame input[type="tel"]:focus,
-        .hs-form-frame input[type="number"]:focus,
-        .hs-form-frame textarea:focus,
-        .hs-form-frame select:focus {
-            background-color: rgba(255, 255, 255, 0.15) !important;
-            border-color: rgba(255, 255, 255, 0.5) !important;
-            outline: none !important;
-        }
-        
-        /* Remove text selection highlighting */
-        .hs-form-frame *::selection {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            color: white !important;
-        }
-        
-        .hs-form-frame *::-moz-selection {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            color: white !important;
-        }
-        
-        .hs-form-frame input::selection,
-        .hs-form-frame textarea::selection {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            color: white !important;
-        }
-        
-        .hs-form-frame input::-moz-selection,
-        .hs-form-frame textarea::-moz-selection {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            color: white !important;
-        }
-        
-        /* Style checkboxes and radio buttons */
-        .hs-form-frame input[type="checkbox"],
-        .hs-form-frame input[type="radio"] {
-            accent-color: white !important;
-        }
-        
-        /* Button styling */
-        .hs-form-frame .hs-button,
-        .hs-form-frame input[type="submit"],
-        .hs-form-frame button[type="submit"] {
-            color: #1e7e34 !important;
-            background-color: white !important;
-        }
-        
-        .hs-form-frame .hs-button:hover,
-        .hs-form-frame input[type="submit"]:hover,
-        .hs-form-frame button[type="submit"]:hover {
-            background-color: rgba(255, 255, 255, 0.9) !important;
-        }
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
         
@@ -1694,42 +1604,17 @@
     <!-- ============================================ -->
     <!-- CONTACT / REQUEST QUOTE SECTION -->
     <!-- ============================================ -->
-    <section id="contact" class="py-24 bg-gradient-to-br from-primary via-primary-light to-primary-dark text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-        </div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h2>
-                <p class="text-xl text-green-100 max-w-2xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Get in Touch</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     Tell us what you need moved and when it has to land. Your dedicated coordinator will reply with real options and exact pricing in minutes; no obligation, just answers.
                 </p>
             </div>
             
-            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 shadow-2xl">
-                <script src="https://js.hsforms.net/forms/embed/44398490.js" defer></script>
-                <div class="hs-form-frame" data-region="na1" data-form-id="ed829759-625e-4d3a-bad2-08a7ab54f7ba" data-portal-id="44398490"></div>
-            </div>
-            
-            <div class="mt-12 grid md:grid-cols-2 gap-8 text-center">
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Locations</h3>
-                    <p class="text-green-100">7150 Standard Drive,<br>Hanover MD 21076</p>
-                    <p class="text-green-100 mt-4">4900 South Broad Street, Suite 330<br>Philadelphia, PA 19112</p>
-                    <p class="text-green-100 mt-4">22900 Shaw Road, Suite 101-5,<br>Sterling, VA 20166</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Contact</h3>
-                    <p class="text-green-100 mb-2">24/7 Live Support -</p>
-                    <p class="text-green-100 mb-2">Toll Free Phone: (800) 310-1033</p>
-                    <p class="text-green-100">Operations: logistics@dbaco.com</p>
-                    <p class="text-green-100">Sales: eissales@dbaco.com</p>
-                </div>
-            </div>
-            
-            <div class="mt-8 text-center">
-                <p class="text-green-100 text-sm">Trusted since 1994 • 30+ Years of Mission-Critical Delivery</p>
-            </div>
+            <script src="https://js.hsforms.net/forms/embed/44398490.js" defer></script>
+            <div class="hs-form-frame" data-region="na1" data-form-id="ed829759-625e-4d3a-bad2-08a7ab54f7ba" data-portal-id="44398490"></div>
         </div>
     </section>
 
