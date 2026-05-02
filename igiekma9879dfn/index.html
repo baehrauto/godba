@@ -354,16 +354,28 @@
     </nav>
     
     <!-- Hero -->
-    <section class="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-                    Customer Satisfaction Survey
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-600 mb-8">
-                    Your feedback helps us improve our service. Please take a moment to share your experience with us.
-                </p>
-            </div>
+    <section class="relative bg-gradient-to-br from-[#0a1a0e] via-[#0f2517] to-[#1a1f1a] overflow-hidden pt-32 pb-24">
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 1440 600">
+            <defs>
+                <linearGradient id="hero-ribbon-survey" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#34d676" stop-opacity="0" />
+                    <stop offset="50%" stop-color="#34d676" stop-opacity="0.08" />
+                    <stop offset="100%" stop-color="#34d676" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path d="M-150 450 C250 100 650 400 1050 150 C1450 -100 1350 450 1650 250" stroke="url(#hero-ribbon-survey)" stroke-width="180" fill="none" stroke-linecap="round" />
+        </svg>
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/[0.07] rounded-full blur-[150px]"></div>
+        <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/[0.05] rounded-full blur-[120px]"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <p class="text-xs sm:text-sm tracking-[0.2em] uppercase text-primary mb-4 font-semibold">&mdash; Customer Survey</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white">
+                Customer Satisfaction Survey
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Your feedback helps us serve our customers better. It only takes a moment.
+            </p>
         </div>
     </section>
 
